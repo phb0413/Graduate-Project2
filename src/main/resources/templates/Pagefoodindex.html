@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/topmenu.css">
+    <link rel="stylesheet" href="/assets/css/sidemenu.css">
+    <link rel="stylesheet" href="/assets/css/slide.css">
+    <link rel="stylesheet" href="/assets/js/script.js">
+    <link rel="stylesheet" href="/assets/css/sitebox.css">
+    <style>
+        .container {
+          display: flex;
+          align-items: center;
+      }
+
+      .text {
+          margin-right: 10px; /* 텍스트와 버튼 간의 간격을 조절합니다. */
+      }
+
+      .button {
+          padding: 5px 10px;
+          background-color: #3498db;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+        <!-- body{
+          background-image: url(/assets/img/background4.jpg);
+          background-size: contain;
+        } -->
+    </style>
+</head>
+<body>
+<header class="top-bar con-min-width">
+    <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/food">맛집</a>
+                </li>
+                <li>
+                    <a href="#">관광지</a>
+                </li>
+                <li>
+                    <a href="#">숙소</a>
+                </li>
+                <li>
+                    <a href="#">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<aside class="side-bar">
+    <!-- <style>
+      /* CSS 스타일링 */
+      .side-bar {
+          background-color: blue; /* 원하는 배경색으로 변경 */
+          color: #fff; /* 글자 색상 변경 (흰색 예시) */
+          padding: 10px; /* 필요에 따라 여백(padding)을 조절할 수 있습니다. */
+      }
+  </style> -->
+    <ul>
+        <li>
+            <a href="http://localhost:8080/Page">fc서울</a>
+            <ul>
+                <li><a href="http://localhost:8080/food">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">수원삼성</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">수원fc</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">인천유나이티드</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">강원fc</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">대전하나시티즌</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">전북현대</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">광주fc</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">대구fc</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">포항스틸러스</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">울산현대</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">제주유나이티드</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+<div class="site-box">
+    <div class="container">
+        <!-- < 여기에 사이트 내용을 추가할 수 있습니다.> -->
+        <h1>상암 추천 맛집</h1>
+        <!-- <p>This is a simple site box.</p>
+
+
+              <-- <-- <button class="button">* 현 위치</button> -->
+        <button class="button">* 현 위치</button>
+    </div>
+</div>
+<div class="outer">
+    <div class="inner-list">
+        <div class="inner">
+            <img src="/assets/img/food6.jpg">
+        </div>
+        <div class="inner">
+            <img src="/assets/img/food7.jpg">
+        </div>
+        <div class="inner">
+            <img src="/assets/img/food8.jpg">
+        </div>
+    </div>
+</div>
+
+<div class="button-list">
+    <button class="button-left">← Left</button>
+    <button class="button-right">Right →</button>
+</div>
+
+<!-- <div class="slider-container">
+  <div class="slider">
+      <div class="slide">
+          <img src="assets/img/food1.jpg" alt="Slide 1">
+      </div>
+      <div class="slide">
+          <img src="assets/img/food4.jpg" alt="Slide 2">
+      </div>
+      <div class="slide">
+          <img src="assets/img/food5.jpg" alt="Slide 3">
+      </div>
+</div>
+</div> -->
+
+<script src="/assets/js/script.js"></script>
+</body>
+</html>

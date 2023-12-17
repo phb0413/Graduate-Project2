@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.site-box {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0px auto;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(65, 91, 177)
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: #666;
+}
