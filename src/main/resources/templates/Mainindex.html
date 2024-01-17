@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,17 @@
           background-size: 350px 250px;
           background-position: center;
           background-repeat: no-repeat;
+        }
+        table{
+            width:50%;
+            border: solid #444444;
+            text-align: center;
+        }
+        th, td{
+            border: solid #444444;
+        }
+        h3{
+          text-align: center;
         }
     </style>
 </head>
@@ -154,8 +165,61 @@
         </li>
     </ul>
 </aside>
-<div style="text-align: center;">
-    <img src="/assets/img/table.PNG" width="1000">
-</div>
+<h3>k리그 splitA 순위</h3>
+<table align="center">
+    <thead>
+    <tr>
+        <th>순위</th>
+        <th>팀명</th>
+        <th>경기수</th>
+        <th>승점</th>
+        <th>승</th>
+        <th>무</th>
+        <th>패</th>
+        <th>득실차</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="team : ${teamDataList}">
+        <td th:text="${team.rank}"></td>
+        <td th:text="${team.title}"></td>
+        <td th:text="${team.match}"></td>
+        <td th:text="${team.point}"></td>
+        <td th:text="${team.victory}"></td>
+        <td th:text="${team.draw}"></td>
+        <td th:text="${team.defeat}"></td>
+        <td th:text="${team.diff}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>k리그 splitB 순위</h3>
+<table align="center">
+    <thead>
+    <tr>
+        <th>순위</th>
+        <th>팀명</th>
+        <th>경기수</th>
+        <th>승점</th>
+        <th>승</th>
+        <th>무</th>
+        <th>패</th>
+        <th>득실차</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="teamb : ${teambDataList}">
+        <td th:text="${teamb.brank}"></td>
+        <td th:text="${teamb.btitle}"></td>
+        <td th:text="${teamb.bmatch}"></td>
+        <td th:text="${teamb.bpoint}"></td>
+        <td th:text="${teamb.bvictory}"></td>
+        <td th:text="${teamb.bdraw}"></td>
+        <td th:text="${teamb.bdefeat}"></td>
+        <td th:text="${teamb.bdiff}"></td>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
