@@ -9,16 +9,15 @@ public class HomeController {
     @GetMapping(value = "/")
     public String home() {
         return "Mainindex";
-
     }
-
     @GetMapping(value = "Page")
     public String Pageindex() {
         return "Pageindex";
     }
 
     @GetMapping(value = "food")
-    public String Pagefoodindex() {
+    public String getPagefoodindex() {
         return "Pagefoodindex";
     }
+
 }

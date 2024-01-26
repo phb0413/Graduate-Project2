@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +10,32 @@
     <link rel="stylesheet" href="/assets/css/sitebox.css">
     <style>
         .container {
-          display: flex;
-          align-items: center;
-      }
+            display: flex;
+            align-items: center;
+        }
 
-      .text {
-          margin-right: 10px; /* 텍스트와 버튼 간의 간격을 조절합니다. */
-      }
+        .text {
+            margin-right: 10px; /* 텍스트와 버튼 간의 간격을 조절합니다. */
+        }
 
-      .button {
-          padding: 5px 10px;
-          background-color: #3498db;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-      }
+        .button {
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-        <!-- body{
-          background-image: url(/assets/img/background4.jpg);
-          background-size: contain;
-        } -->
+        <!--
+        body {
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
+        }
+
+        -->
     </style>
+    <title></title>
 </head>
 <body>
 <header class="top-bar con-min-width">
@@ -179,46 +183,30 @@
     <div class="container">
         <!-- < 여기에 사이트 내용을 추가할 수 있습니다.> -->
         <h1>상암 추천 맛집</h1>
-        <!-- <p>This is a simple site box.</p>
-
-
-              <-- <-- <button class="button">* 현 위치</button> -->
         <button class="button">* 현 위치</button>
     </div>
 </div>
-<div class="outer">
-    <div class="inner-list">
-        <div class="inner">
-            <img src="/assets/img/food6.jpg">
-        </div>
-        <div class="inner">
-            <img src="/assets/img/food7.jpg">
-        </div>
-        <div class="inner">
-            <img src="/assets/img/food8.jpg">
-        </div>
+<div class="slider-container">
+    <div class="slides">
+        <div class="slide"><img src="assets/img/food6.jpg"></div>
+        <div class="slide"><img src="assets/img/food6.jpg"></div>
+        <div class="slide"><img src="assets/img/food6.jpg"></div>
+        <div class="slide"><img src="assets/img/food6.jpg"></div>
+        <div class="slide"><img src="assets/img/food6.jpg"></div>
     </div>
-</div>
 
-<div class="button-list">
-    <button class="button-left">← Left</button>
-    <button class="button-right">Right →</button>
-</div>
+    <b><p>가족들 및 지인들과 함께하기 좋은 식당으로 너무 가볍지도 않으며 든든한 한끼를 할 수 있는 식당들</p></b>
 
-<!-- <div class="slider-container">
-  <div class="slider">
-      <div class="slide">
-          <img src="assets/img/food1.jpg" alt="Slide 1">
-      </div>
-      <div class="slide">
-          <img src="assets/img/food4.jpg" alt="Slide 2">
-      </div>
-      <div class="slide">
-          <img src="assets/img/food5.jpg" alt="Slide 3">
-      </div>
-</div>
-</div> -->
+    <div class="slides">
+        <div class="slide"><img src="assets/img/food7.jpg"></div>
+        <div class="slide"><img src="assets/img/food7.jpg"></div>
+        <div class="slide"><img src="assets/img/food7.jpg"></div>
+        <div class="slide"><img src="assets/img/food7.jpg"></div>
+        <div class="slide"><img src="assets/img/food7.jpg"></div>
+    </div>
 
-<script src="/assets/js/script.js"></script>
+    <b><p>혼자 여행온 사람들을 위한 식당으로 너무 과하지도 않으며 시끄럽지 않은 분위기로 부담없이 맛있는 식사를 즐길 수 있는 식당들 입니다.</p></b>
+
+</div>
 </body>
 </html>
