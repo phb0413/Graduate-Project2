@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurity
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -29,7 +30,7 @@ public class CrawlingService {
         WebDriver driver = new ChromeDriver(options);
 
         try {
-            String url = "https://www.diningcode.com/search.dc?query=%EC%83%81%EC%95%94%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5";
+            String url = "https://www.diningcode.com/search.dc?query=%EC%83%81%EC%95%94%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5&keyword=%ED%98%BC%EB%B0%A5";
             driver.get(url);
 
             WebElement restaurantContainer = driver.findElement(By.cssSelector("div.sc-gLLvby.qLVfB.Poi__List"));
@@ -37,12 +38,32 @@ public class CrawlingService {
             for (WebElement restaurant : restaurantContainer.findElements(By.tagName("li"))) {
                 String name = restaurant.findElement(By.cssSelector(" a > div.RHeader > div > div.InfoHeader > h1")).getText();
                 String imageUrl = restaurant.findElement(By.cssSelector("a > div.RHeader > img")).getAttribute("src");
-                String category = restaurant.findElement(By.cssSelector("a > div.RHeader > div > div.Poi__Info__Middle > p.Category > span:nth-child(1)")).getText();
+                String category = restaurant.findElement(By.cssSelector("a > div.RHeader > div > div.Poi__Info__Middle > p.Hash > strong")).getText();
                 String rating = restaurant.findElement(By.cssSelector("a > div.RHeader > div > div.Rate > p.UserScore")).getText();
 
                 restaurantRepository.save(new Restaurant(name, imageUrl, category, rating));
             }
-        } finally {
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        try {
+            String url = "https://www.diningcode.com/search.dc?query=%EC%83%81%EC%95%94%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5&keyword=%EA%B0%80%EC%A1%B1%EC%99%B8%EC%8B%9D";
+            driver.get(url);
+
+            WebElement restaurantContainer = driver.findElement(By.cssSelector("div.sc-gLLvby.qLVfB.Poi__List"));
+
+            for (WebElement restaurant : restaurantContainer.findElements(By.tagName("li"))) {
+                String name = restaurant.findElement(By.cssSelector(" a > div.RHeader > div > div.InfoHeader > h1")).getText();
+                String imageUrl = restaurant.findElement(By.cssSelector("a > div.RHeader > img")).getAttribute("src");
+                String category = restaurant.findElement(By.cssSelector("a > div.RHeader > div > div.Poi__Info__Middle > p.Hash > strong")).getText();
+                String rating = restaurant.findElement(By.cssSelector("a > div.RHeader > div > div.Rate > p.UserScore")).getText();
+
+                restaurantRepository.save(new Restaurant(name, imageUrl, category, rating));
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
             driver.quit();
         }
 

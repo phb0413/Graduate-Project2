@@ -15,9 +15,6 @@ public class HomeController {
         return "Pageindex";
     }
 
-    @GetMapping(value = "food")
-    public String getPagefoodindex() {
-        return "Pagefoodindex";
-    }
+
 
 }

@@ -187,12 +187,14 @@
     </div>
 </div>
 <div class="slider-container">
-    <div class="slides">
-        <div class="slide"><img src="assets/img/food6.jpg"></div>
-        <div class="slide"><img src="assets/img/food6.jpg"></div>
-        <div class="slide"><img src="assets/img/food6.jpg"></div>
-        <div class="slide"><img src="assets/img/food6.jpg"></div>
-        <div class="slide"><img src="assets/img/food6.jpg"></div>
+    <div th:each="restaurants : ${restaurants}">
+
+        <div class="slide">
+            식당이름 - <span th:text="${restaurants.name}"></span>
+            카테고리 - <span th:text="${restaurants.category}"></span>
+            별점 - <span th:text="${restaurants.rating}"></span>
+        </div>
+
     </div>
 
     <b><p>가족들 및 지인들과 함께하기 좋은 식당으로 너무 가볍지도 않으며 든든한 한끼를 할 수 있는 식당들</p></b>
