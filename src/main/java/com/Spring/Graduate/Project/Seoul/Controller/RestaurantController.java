@@ -17,10 +17,10 @@ public class RestaurantController {
 
 
     @Autowired
-    private CrawlingService crawlingService;
+    private  CrawlingService crawlingService;
 
     @Autowired
-    private RestaurantRepository restaurantRepository;
+    private  RestaurantRepository restaurantRepository;
 
 
 
