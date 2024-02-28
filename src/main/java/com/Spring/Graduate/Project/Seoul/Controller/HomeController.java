@@ -15,6 +15,12 @@ public class HomeController {
         return "Pageindex";
     }
 
+    @GetMapping(value = "SeoulTour")
+    public String SeoulTour() {return "SeoulTour";}
+
+    @GetMapping(value = "SeoulHome")
+    public String SeoulHome() {return "SeoulHome";}
+
 
 
 }

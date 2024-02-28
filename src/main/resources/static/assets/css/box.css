@@ -1,0 +1,12 @@
+.box {
+    width: 1120px;
+    height: 190px;
+    border: 2px solid #333;
+    padding: 17px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 650px;
+    left: 50px;
+    transform: translateX(-50%);
+}
