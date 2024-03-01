@@ -21,6 +21,9 @@ public class HomeController {
     @GetMapping(value = "SeoulHome")
     public String SeoulHome() {return "SeoulHome";}
 
+    @GetMapping(value = "SeoulCourse")
+    public String SeoulCourse() {return "SeoulCourse";}
+
 
 
 }
