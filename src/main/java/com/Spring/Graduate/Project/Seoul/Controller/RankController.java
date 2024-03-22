@@ -18,7 +18,7 @@ public class RankController {
         this.scrapingService=scrapingService;
     }
 
-    @GetMapping("/Rank")
+    @GetMapping("/")
     public String getMainIndex(Model model) {
         List<TeamDTO> teamDataList = ScrapingService.scrapeRank();
 
