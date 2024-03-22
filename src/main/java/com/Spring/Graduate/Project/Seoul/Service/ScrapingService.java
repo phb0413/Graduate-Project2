@@ -23,7 +23,7 @@ public class ScrapingService {
 
             for(Element soccerTeam : soccerTeams) {
                 int rank = Integer.parseInt(soccerTeam.select("th").text());
-                String image = soccerTeam.select("td.tm > div > span.emblem > img").text();
+                String image = soccerTeam.select("td.tm > div > span.emblem > img").attr("abs:src");
                 String title = soccerTeam.select("span:nth-child(2)").text();
                 int match = Integer.parseInt(soccerTeam.selectFirst("td:nth-child(3)").text());
                 int point = Integer.parseInt(soccerTeam.selectFirst("td:nth-child(4)").text());
@@ -42,5 +42,6 @@ public class ScrapingService {
         }
         return teamDataList;
     }
+
 
 }

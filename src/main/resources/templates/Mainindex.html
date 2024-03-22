@@ -20,6 +20,7 @@
             width:50%;
             border: solid #444444;
             text-align: center;
+            border-collapse: collapse;
         }
         th, td{
             border: solid #444444;
@@ -151,6 +152,7 @@
     <thead>
     <tr>
         <th>순위</th>
+        <th>엠뷸럼</th>
         <th>팀명</th>
         <th>경기수</th>
         <th>승점</th>
@@ -163,6 +165,7 @@
     <tbody>
     <tr th:each="team : ${teamDataList}">
         <td th:text="${team.rank}"></td>
+        <td><img th:src="${team.img}"></td>
         <td th:text="${team.title}"></td>
         <td th:text="${team.match}"></td>
         <td th:text="${team.point}"></td>
@@ -174,6 +177,5 @@
     </tbody>
 </table>
 
-<!--<img src="/assets/img/table2.PNG" style="display: block; margin: auto; width: 70%; height: 70%;"> -->
 </body>
 </html>
