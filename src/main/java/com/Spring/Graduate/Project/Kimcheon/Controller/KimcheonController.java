@@ -18,4 +18,9 @@ public class KimcheonController {
     public String Kimindex(){
         return "Kimindex";
     }
+
+    @GetMapping("kcourse")
+    public String KimCourse(){
+        return "KimCourse";
+    }
 }
