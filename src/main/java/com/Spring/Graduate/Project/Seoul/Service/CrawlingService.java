@@ -8,12 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
-import java.io.IOException;
-import java.util.List;
 
 @Service
 public class CrawlingService {
@@ -69,7 +65,4 @@ public class CrawlingService {
 
     }
 
-    public List<Restaurant> getAllRestaurants(){
-        return restaurantRepository.findAll();
-    }
 }
