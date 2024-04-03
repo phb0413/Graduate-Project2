@@ -56,16 +56,16 @@
         <nav class="top-bar__menu-box-1">
             <ul>
                 <li>
-                    <a href="http://localhost:8080/food">맛집</a>
+                    <a href="http://localhost:8080/sfood">맛집</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/SeoulTour">관광지</a>
+                    <a href="http://localhost:8080/ktour">관광지</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/SeoulHome">숙소</a>
+                    <a href="http://localhost:8080/khome">숙소</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/SeoulCourse">코스추천</a>
+                    <a href="http://localhost:8080/kcourse">코스추천</a>
                 </li>
             </ul>
         </nav>
@@ -95,7 +95,7 @@
         <li>
             <a href="#">수원fc</a>
             <ul>
-                <li><a href="#">맛집</a></li>
+                <li><a href="http://localhost:8080/sfood">맛집</a></li>
                 <li><a href="#">관광지</a></li>
                 <li><a href="#">숙소</a></li>
                 <li><a href="#">코스추천</a></li>
@@ -187,7 +187,7 @@
 <div class="site-box">
     <div class="container">
         <!-- < 여기에 사이트 내용을 추가할 수 있습니다.> -->
-        <h1>상암 추천 맛집</h1>
+        <h1>김천 추천 맛집</h1>
         <button class="button">* 현 위치</button>
     </div>
 </div>
@@ -206,11 +206,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="restaurants : ${restaurants}">
-        <td th:text="${restaurants.name}"></td>
-        <td><img th:src="${restaurants.imageUrl}" width="100px" height="100px"></td>
-        <td th:text="${restaurants.category}"></td>
-        <td th:text="${restaurants.rating}"></td>
+    <tr th:each="sRestaurants : ${sRestaurants}">
+        <td th:text="${sRestaurants.name}"></td>
+        <td><img th:src="${sRestaurants.imageUrl}" width="100px" height="100px"></td>
+        <td th:text="${sRestaurants.category}"></td>
+        <td th:text="${sRestaurants.rating}"></td>
     </tr>
     </tbody>
 </table>
@@ -220,7 +220,7 @@
 <script>
     var container = document.getElementById('map');
     var options = {
-        center: new kakao.maps.LatLng(37.5682617, 126.8972735),
+        center: new kakao.maps.LatLng( 37.297749, 127.0113456),
         level: 4
     };
 
@@ -229,44 +229,32 @@
     // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
     var positions = [
         {
-            content: '<div>라이스쉐프 상암점</div>',
-            latlng: new kakao.maps.LatLng(37.5638012, 126.8997262)
+            content: '<div>유치회관</div>',
+            latlng: new kakao.maps.LatLng(37.25880338373601 , 127.03210115432739)
         },
         {
-            content: '<div>모리타 상암</div>',
-            latlng: new kakao.maps.LatLng(37.57678689999999, 126.8947339)
+            content: '<div>연밀 수원</div>',
+            latlng: new kakao.maps.LatLng(37.28131782764072, 127.01738655567169)
         },
         {
-            content: '<div>오야스시</div>',
-            latlng: new kakao.maps.LatLng(37.5762305, 126.894344)
+            content: '<div>정돈 광교</div>',
+            latlng: new kakao.maps.LatLng(37.28517414874996, 127.05687940120697)
         },
         {
-            content: '<div>다가이순대국</div>',
-            latlng: new kakao.maps.LatLng(37.5773298, 126.8940046)
+            content: '<div>평장원 남문점</div>',
+            latlng: new kakao.maps.LatLng(37.2745968 , 127.0190287)
         },
         {
-            content: '<div>동동가정식덮밥</div>',
-            latlng: new kakao.maps.LatLng(37.56506299999999, 126.903072)
+            content: '<div>난 인계동</div>',
+            latlng: new kakao.maps.LatLng(37.2643452 , 127.0350581)
         },
         {
-            content: '<div>상암 일미락</div>',
-            latlng: new kakao.maps.LatLng(37.57632700000001, 126.8971762)
+            content: '<div>가보정 수원</div>',
+            latlng: new kakao.maps.LatLng(37.2741957 , 127.0287047)
         },
         {
-            content: '<div>성산왕갈비</div>',
-            latlng: new kakao.maps.LatLng(37.5696765, 126.9030875)
-        },
-        {
-            content: '<div>무한리필808</div>',
-            latlng: new kakao.maps.LatLng(37.5772144, 126.8936056)
-        },
-        {
-            content: '<div>도야지</div>',
-            latlng: new kakao.maps.LatLng(37.5656965, 126.9032843)
-        },
-        {
-            content: '<div>인칸토키친</div>',
-            latlng: new kakao.maps.LatLng(37.5770598, 126.8913944)
+            content: '<div>용성통닭 수원</div>',
+            latlng: new kakao.maps.LatLng(37.27958060459911, 127.017622590065)
         }
 
     ];
