@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box2.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/sfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/stour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -61,7 +64,7 @@
                 <li><a href="http://localhost:8080/sfood">맛집</a></li>
                 <li><a href="http://localhost:8080/stour">관광지</a></li>
                 <li><a href="http://localhost:8080/shome">숙소</a></li>
-                <li><a href="http://localhost:8080/scourse">코스추천</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,54 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<body>
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel7.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>포포인츠 바이 쉐라톤 수원</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>팔달구 효원로307번길 27, 수원시, 16488</b></p>
+            <p><b>수원시청역 10번 출구로 나오면 도보 5분 이내로 호텔에 도착할 수 있습니다. 오픈한지</b></p>
+            <p><b>얼마되지 않은 신상 호텔이라 룸 컨디션이 상당히 좋은것이 특징입니다. 호텔에 수영장이</b></p>
+            <p><b>루프탑으로 있고 풀 사이드바가 있어 술마시기도 좋습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>160,000원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel8.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>호텔잇츠더블유</b></p>
+            <p><b>* * * * (4.53)</b></p>
+            <p><b>경기 수원시 팔달구 매산로2가 9-6</b></p>
+             <p><b>수원 종합운동장까지 3km정도 거리에 있으며 24시간 운영되고 있습니다. 로데오 가깝습니다.</b></p>
+             <p><b>깨끗한 시설과 트윈배드까지 준비되어 있습니다. 또한 전 객실 세탁기, 인덕션, 싱크대가 있으며</b></p>
+             <p><b>전 객실 대여료 5000원을 지불하면 조리도구 또한 대여가능합니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>45,455원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel9.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>노보텔 앰배서더 수원</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>경기 수원시 팔달구 덕영대로 902</b></p>
+            <p><b>수원역 4번출구로 나오면 호텔까지 갈 수 있습니다. 자가용 이용시 THE AK TOWN 7번 주차장</b></p>
+            <p><b>입구를 이용하시면 편리합니다. 조식의 가짓수 가 상당히 많아 다양한 국적의 숙박객들이 즐길 수</b></p>
+            <p><b>있고 헬스장은 무료로 이용 가능합니다. 룸 또한 깔끔하고 미니바는 유료로 이용 가능합니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>170,000원</p></b></div>
+</div>
+</body>

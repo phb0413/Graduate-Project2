@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축구 여행 가이드</title>
+    <link rel="stylesheet" href="/assets/css/topmenu.css">
+    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="/assets/css/sidemenu.css">
+    <style>
+        body{
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+<header class="top-bar con-min-width">
+    <h1><span style="color:black">Soccer Tour Guide</span></h1>
+</header>
+
+<aside class="side-bar">
+    <ul>
+        <li>
+            <a href="http://localhost:8080/Page">fc서울</a>
+            <ul>
+                <li><a href="http://localhost:8080/food">맛집</a></li>
+                <li><a href="http://localhost:8080/SeoulTour">관광지</a></li>
+                <li><a href="http://localhost:8080/SeoulHome">숙소</a></li>
+                <li><a href="http://localhost:8080/SeoulCourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/kindex">김천상무</a>
+            <ul>
+                <li><a href="http://localhost:8080/kfood">맛집</a></li>
+                <li><a href="http://localhost:8080/ktour">관광지</a></li>
+                <li><a href="http://localhost:8080/khome">숙소</a></li>
+                <li><a href="http://localhost:8080/kcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/sindex">수원fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/sfood">맛집</a></li>
+                <li><a href="http://localhost:8080/stour">관광지</a></li>
+                <li><a href="http://localhost:8080/shome">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">인천유나이티드</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">강원fc</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">대전하나시티즌</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">전북현대</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">광주fc</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">대구fc</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">포항스틸러스</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">울산현대</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">제주유나이티드</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+
+<div id="map" style="width:800px;height:600px; margin: 0 auto;"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f5b93b38400f8a439279bddc0851658c"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(37.297749, 127.0113456),
+        level: 5
+    };
+
+    var map = new kakao.maps.Map(container, options);
+
+    // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
+    var positions = [
+        {
+            content: '<div>수원종합운동장</div>',
+            latlng: new kakao.maps.LatLng(37.297749, 127.0113456)
+        },
+        {
+            content: '<div>수원화성</div>',
+            latlng: new kakao.maps.LatLng( 37.2871202, 127.0119379)
+        },
+        {
+            content: '<div>연밀 수원</div>',
+            latlng: new kakao.maps.LatLng(37.28131782764072, 127.01738655567169)
+        },
+        {
+            content: '<div>광교호수공원</div>',
+            latlng: new kakao.maps.LatLng(37.2830911, 127.0659215)
+        },
+        {
+            content: '<div>정돈 광교</div>',
+            latlng: new kakao.maps.LatLng(37.28517414874996 , 127.05687940120697)
+        },
+        {
+            content: '<div>월화원</div>',
+            latlng: new kakao.maps.LatLng(37.2652416, 127.0377224)
+        },
+        {
+            content: '<div>용성통닭 수원</div>',
+            latlng: new kakao.maps.LatLng(37.27958060459911, 127.017622590065)
+        }
+
+    ];
+
+    for (var i = 0; i < positions.length; i ++) {
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng // 마커의 위치
+        });
+
+        // 마커에 표시할 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: positions[i].content // 인포윈도우에 표시할 내용
+        });
+
+        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+        // 이벤트 리스너로는 클로저를 만들어 등록합니다
+        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    }
+
+    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+    function makeOverListener(map, marker, infowindow) {
+        return function() {
+            infowindow.open(map, marker);
+        };
+    }
+
+    // 인포윈도우를 닫는 클로저를 만드는 함수입니다
+    function makeOutListener(infowindow) {
+        return function() {
+            infowindow.close();
+        };
+    }
+
+    var linePath = [
+        new kakao.maps.LatLng(37.297749, 127.0113456),
+        new kakao.maps.LatLng(37.2871202, 127.0119379),
+        new kakao.maps.LatLng(37.28131782764072, 127.01738655567169)
+    ];
+    var linePath2 = [
+        new kakao.maps.LatLng(37.297749, 127.0113456),
+        new kakao.maps.LatLng(37.28517414874996 , 127.05687940120697),
+        new kakao.maps.LatLng(37.2830911, 127.0659215)
+    ];
+    var linePath3 = [
+        new kakao.maps.LatLng(37.297749, 127.0113456),
+        new kakao.maps.LatLng(37.27958060459911, 127.017622590065),
+        new kakao.maps.LatLng(37.2652416, 127.0377224)
+    ];
+
+
+    // 지도에 표시할 선을 생성합니다
+    var polyline = new kakao.maps.Polyline({
+        path: linePath, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#FFAE00', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+
+    var polyline2 = new kakao.maps.Polyline({
+        path: linePath2, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#75B8FA', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+
+    var polyline3 = new kakao.maps.Polyline({
+        path: linePath3, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#FF3DE5', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+
+    // 지도에 선을 표시합니다
+    polyline.setMap(map);
+    polyline2.setMap(map);
+    polyline3.setMap(map);
+
+</script>
+
+<div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
+    <div style="margin: 0 auto; align-content: center; text-align: center;">
+        <b style="color: #FFAE00">1. 수원종합운동장 -> 수원화성 -> 연밀</b>
+        <p>문화재자료 제15호로 지정되어 있는 봉황대에서 사진도 찍고 주변 연화지에서 산책한 후 둥지톳밥서 식사를 합니다. 이곳은 톳밥정식이 </p>
+        <p>유명하며 메뉴구성으로 나오는 다양한 반찬들 또한 인기가 많습니다. 식사를 마친 후 차로 김천종합운동장으로 이동해 경기를 관람한 후 숙소로</p>
+        <p>돌아갑니다.</p>
+    </div>
+</div>
+
+<div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
+    <div style="margin: 0 auto; align-content: center; text-align: center;">
+        <b style="color: #75B8FA">2. 수원종합운동장 -> 정돈 광교 -> 광교호수공원</b>
+        <p>김천의 짬뽕 맛집으로 유명한 남경원에서 식사를 합니다. 이곳은 영업시간이 15시까지로 매우 짧기 때문에 경기 관람전 미리 식사를 먼저 하고</p>
+        <p>그리고 김천종합운동장으로 이동하여 경기를 관람합니다. 그 후 김천의 유명 관광지인 부항댐 출렁다리로 이동해 다리 위를 걷는 짜릿한 경험을</p>
+        <p>하고 주변에 여러 문화 시설들을 구경한 후 숙소로 이동합니다.</p>
+    </div>
+</div>
+
+<div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
+    <div style="margin: 0 auto; align-content: center; text-align: center;">
+        <b style="color: #FF3DE5">3. 수원종합운동장 -> 용성통닭 수원 -> 월화원</b>
+        <p>경기를 관람하기전 하루면옥으로 이동해 식사를 먼저 합니다. 이곳은 평양냉면과 갈비곰국밥이 유명한 곳으로 평양냉면은 간이 되어 있어 부담없이</p>
+        <p>먹을 수 있습니다. 식사를 마친 후 김천종합운동장으로 이동해 경기를 관람하고 김천에서 유명한 사명대사공원으로 이동합니다. 관광테마공원으로</p>
+        <p>아름다운 자연과 문화와 역사자원을 자연속에서 체험할 수 있는 관광지입니다. 공원을 구경한 후 숙소로 돌아갑니다.</p>
+    </div>
+</div>
+
+</body>
+</html>

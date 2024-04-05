@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/sfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -59,9 +62,9 @@
             <a href="http://localhost:8080/sindex">수원fc</a>
             <ul>
                 <li><a href="http://localhost:8080/sfood">맛집</a></li>
-                <li><a href="http://localhost:8080/stour">관광지</a></li>
-                <li><a href="http://localhost:8080/shome">숙소</a></li>
-                <li><a href="http://localhost:8080/scourse">코스추천</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,19 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<main class="contents">
+    <section id="headling">
+        <div class="detail" style="margin: 0 auto; text-align: center;">
+            <img src="/assets/img/수원종합운동장.jpg" style="display: block; margin: 80px auto 80px auto; width:900px; height:300px; margin-left: auto; margin-right: auto">
+            <div class = "box">
+                <p>2003년에 창단된 경기도 수원시를 연고로 하는 K리그1 소속의 프로 축구단이다. 당시 3부 리그격이었던 내셔널리그에서 시작해 2부 리그 K리그2를 거쳐</p>
+                <p>1부 리그 K리그1까지 승격한 유일한 구단이다.수원 삼성 블루윙즈와 같은 수원시를 연고로 하는 로컬 더비이며 수원 FC가 2013년 K리그 챌린지에 참가하면</p>
+                <p>서K리그 최초의 동일 연고 로컬 더비가 되었다. 현재 수원 FC에는 전 국가대표 출신들도 몇몇 뛰고 있으며 리그에서 준수한 성적을 내고 있다. 현재 구단주는</p>
+                <p>이재준 수원시장, 감독은 김은중, 주장은 이용이 맞고 있으며 현재 수원 FC에서 활발하게 활약중인 이승우 선수가 부주장 3명중 포함되어 있다. </p>
+            </div>
+        </div>
+
+    </section>
+</main>
