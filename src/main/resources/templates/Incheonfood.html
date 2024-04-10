@@ -56,16 +56,16 @@
         <nav class="top-bar__menu-box-1">
             <ul>
                 <li>
-                    <a href="http://localhost:8080/food">맛집</a>
+                    <a href="http://localhost:8080/ifood">맛집</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/SeoulTour">관광지</a>
+                    <a href="http://localhost:8080/stour">관광지</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/SeoulHome">숙소</a>
+                    <a href="http://localhost:8080/shome">숙소</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/SeoulCourse">코스추천</a>
+                    <a href="http://localhost:8080/scourse">코스추천</a>
                 </li>
             </ul>
         </nav>
@@ -104,7 +104,7 @@
         <li>
             <a href="#">인천유나이티드</a>
             <ul>
-                <li><a href="#">맛집</a></li>
+                <li><a href="http://localhost:8080/ifood">맛집</a></li>
                 <li><a href="#">관광지</a></li>
                 <li><a href="#">숙소</a></li>
                 <li><a href="#">코스추천</a></li>
@@ -187,7 +187,7 @@
 <div class="site-box">
     <div class="container">
         <!-- < 여기에 사이트 내용을 추가할 수 있습니다.> -->
-        <h1>상암 추천 맛집</h1>
+        <h1>김천 추천 맛집</h1>
         <button class="button">* 현 위치</button>
     </div>
 </div>
@@ -206,11 +206,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="restaurants : ${restaurants}">
-        <td th:text="${restaurants.name}"></td>
-        <td><img th:src="${restaurants.imageUrl}" width="100px" height="100px"></td>
-        <td th:text="${restaurants.category}"></td>
-        <td th:text="${restaurants.rating}"></td>
+    <tr th:each="iRestaurants : ${iRestaurants}">
+        <td th:text="${iRestaurants.name}"></td>
+        <td><img th:src="${iRestaurants.imageUrl}" width="100px" height="100px"></td>
+        <td th:text="${iRestaurants.category}"></td>
+        <td th:text="${iRestaurants.rating}"></td>
     </tr>
     </tbody>
 </table>
@@ -220,7 +220,7 @@
 <script>
     var container = document.getElementById('map');
     var options = {
-        center: new kakao.maps.LatLng(37.5682617, 126.8972735),
+        center: new kakao.maps.LatLng( 37.46601938361952, 126.64300918579102),
         level: 4
     };
 
@@ -229,44 +229,40 @@
     // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
     var positions = [
         {
-            content: '<div>라이스쉐프 상암점</div>',
-            latlng: new kakao.maps.LatLng(37.5638012, 126.8997262)
+            content: '<div>이화찹쌀순대 인천</div>',
+            latlng: new kakao.maps.LatLng(37.4642395957711 , 126.6404128074646)
         },
         {
-            content: '<div>모리타 상암</div>',
-            latlng: new kakao.maps.LatLng(37.57678689999999, 126.8947339)
+            content: '<div>현대식당 미추홀구</div>',
+            latlng: new kakao.maps.LatLng(37.46374567584348, 126.64772987365723)
         },
         {
-            content: '<div>오야스시</div>',
-            latlng: new kakao.maps.LatLng(37.5762305, 126.894344)
+            content: '<div>호야네바지락손칼국수 인천</div>',
+            latlng: new kakao.maps.LatLng(37.46389683271954, 126.64763063192368)
         },
         {
-            content: '<div>다가이순대국</div>',
-            latlng: new kakao.maps.LatLng(37.5773298, 126.8940046)
+            content: '<div>반올림피자샵 동인천점</div>',
+            latlng: new kakao.maps.LatLng(37.47160755691882 , 126.64314329624176)
         },
         {
-            content: '<div>동동가정식덮밥</div>',
-            latlng: new kakao.maps.LatLng(37.56506299999999, 126.903072)
+            content: '<div>굴세상 숭의운동장점</div>',
+            latlng: new kakao.maps.LatLng(37.4651966 , 126.645305)
         },
         {
-            content: '<div>상암 일미락</div>',
-            latlng: new kakao.maps.LatLng(37.57632700000001, 126.8971762)
+            content: '<div>평양옥 인천</div>',
+            latlng: new kakao.maps.LatLng( 37.463975604491566 , 126.63988441228867)
         },
         {
-            content: '<div>성산왕갈비</div>',
-            latlng: new kakao.maps.LatLng(37.5696765, 126.9030875)
+            content: '<div>두부와 쭈꾸미 인천</div>',
+            latlng: new kakao.maps.LatLng(37.4635971, 126.6458382)
         },
         {
-            content: '<div>무한리필808</div>',
-            latlng: new kakao.maps.LatLng(37.5772144, 126.8936056)
+            content: '<div>더올드하우스 인천</div>',
+            latlng: new kakao.maps.LatLng(37.467043  ,126.638074)
         },
         {
-            content: '<div>도야지</div>',
-            latlng: new kakao.maps.LatLng(37.5656965, 126.9032843)
-        },
-        {
-            content: '<div>인칸토키친</div>',
-            latlng: new kakao.maps.LatLng(37.5770598, 126.8913944)
+            content: '<div>오리창고 미추홀구</div>',
+            latlng: new kakao.maps.LatLng(37.4635809 ,  126.6478439)
         }
 
     ];
