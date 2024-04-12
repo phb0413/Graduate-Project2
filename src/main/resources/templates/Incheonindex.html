@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/ifood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -65,12 +68,12 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/iindex">인천유나이티드</a>
+            <a href="#">인천유나이티드</a>
             <ul>
                 <li><a href="http://localhost:8080/ifood">맛집</a></li>
-                <li><a href="http://localhost:8080/itour">관광지</a></li>
-                <li><a href="http://localhost:8080/ihome">숙소</a></li>
-                <li><a href="http://localhost:8080/icourse">코스추천</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,20 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<main class="contents">
+    <section id="headling">
+        <div class="detail" style="margin: 0 auto; text-align: center;">
+            <img src="/assets/img/인천경기장.jpg" style="display: block; margin: 80px auto 80px auto; width:900px; height:300px; margin-left: auto; margin-right: auto">
+            <div class = "box">
+                <p>2003년에 창단된 인천광역시를 연고로 하는 K리그1 소속의 프로 축구단이다. K리그의 13번째 구단이다. 최고 성적은 2005년 K리그 준우승과 2015년 FA컵</p>
+                <p>준우승이다. 인천은 할렐루야 축구단 유치와 시민 구단 창단을 두고 고민하다가 후자로 방침을 정하면서 시민 구단인 인천 유나이티드를 창단했다. 인천</p>
+                <p>'유나이티드'라는 이름은 인천시와 시민, 기업이 함께 구단을 출범시켰다는 '연합'의 뜻을 나타내며 시민 구단의 의의와 가장 합치되기 때문에 구단 명칭으로</p>
+                <p>선정되었다. 인천 유나이티드는 2020시즌 15R까지 승점 5점이었다가 12경기 승점 22점을 얻으며 극적인 잔류에 성공했고, 2021시즌에는 8위로 조기 잔류 </p>
+                <p>확정, 2022시즌에는 무려 K리그 4위로 2005년 준우승 이후 최고성적을 기록하면서 아시아 챔피언스리그 PO에 진출했다. 현재 감독은 전 축구선수 조성환이다.</p>
+            </div>
+        </div>
+
+    </section>
+</main>

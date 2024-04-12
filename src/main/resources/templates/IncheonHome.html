@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box2.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/ifood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -65,12 +68,12 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/iindex">인천유나이티드</a>
+            <a href="#">인천유나이티드</a>
             <ul>
                 <li><a href="http://localhost:8080/ifood">맛집</a></li>
-                <li><a href="http://localhost:8080/itour">관광지</a></li>
-                <li><a href="http://localhost:8080/ihome">숙소</a></li>
-                <li><a href="http://localhost:8080/icourse">코스추천</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,54 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<body>
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel10.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>쉐라톤 그랜드 인천 호텔</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>인천 연수구 컨벤시아대로 153</b></p>
+            <p><b>쉐라톤 그랜드 인천 호텔은 송도 센트럴 파크를 바라보는 5성급 호텔로 송도의 중심부 국제무역</b></p>
+            <p><b>단지내에 위치하고 있습니다. 지하 2층, 지상 22층 규모에 총 321개의 객실을 구비하고 있습니다.</b></p>
+            <p><b>뷔페와 다양한 일품요리를 즐길 수 있는 레스토랑들이 각종 모임을 위한 최적의 서비스를 제공합니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>280,500원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel11.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>송도 센트럴 파크 호텔</b></p>
+            <p><b>* * *</b></p>
+            <p><b>인천 연수구 테크노파크로 193</b></p>
+             <p><b>송도 센트럴파크 옆에 있는 위치로 찾아가기가 매우 쉽습니다. 이곳은 엔틱한 느낌의 인테리어와</b></p>
+             <p><b>송도센트럴파크가 한눈에 보이는 곳으로 위치가 좋습니다. 샤워실은 화장실과 따로 분리되어 있고</b></p>
+             <p><b>거대한 욕조 또한 준비되어 있습니다. 주변 공원들을 산책하기에도 매우 좋습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>101,741원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel12.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>>홀리데이 인 인천 송도</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>인천 연수구 인천타워대로 251</b></p>
+            <p><b>화려한 야경을 자랑하는 시티뷰 객실에서 호캉스를 즐길수 있는 호텔로 센트럴파크역 바로 옆에</b></p>
+            <p><b>위치해 있어 접근성이 좋습니다. 12층부터 18층까지의 고층에 위치해 있으며 19층 수라채 다이닝</b></p>
+            <p><b>에서는 송도와 인천대교의 아름다운 전망을 볼 수 있으며 20층에 루프탑 라운지도 준비되어 있다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>101,800원</p></b></div>
+</div>
+</body>
