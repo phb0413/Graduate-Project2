@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -65,7 +68,7 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/iindex">인천유나이티드</a>
+            <a href="#">인천유나이티드</a>
             <ul>
                 <li><a href="http://localhost:8080/ifood">맛집</a></li>
                 <li><a href="http://localhost:8080/itour">관광지</a></li>
@@ -74,12 +77,12 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/gindex">강원fc</a>
+            <a href="#">강원fc</a>
             <ul>
                 <li><a href="http://localhost:8080/gfood">맛집</a></li>
-                <li><a href="http://localhost:8080/gtour">관광지</a></li>
-                <li><a href="http://localhost:8080/ghome">숙소</a></li>
-                <li><a href="http://localhost:8080/gcourse">코스추천</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,20 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<main class="contents">
+    <section id="headling">
+        <div class="detail" style="margin: 0 auto; text-align: center;">
+            <img src="/assets/img/강릉종합운동장.jpg" style="display: block; margin: 80px auto 80px auto; width:900px; height:300px; margin-left: auto; margin-right: auto">
+            <div class = "box">
+                <p>2008년에 강원특별자치도를 연고로 창단한 K리그1 소속의 프로 축구단이다. 대한민국에서 가장 넓은 지역을 연고로 하는 프로 구단이다. 엠블럼의 GREAT</p>
+                <p>UNION은 영서와 영동의 대화합을 의미한다. 강원FC는 2009 시즌에 K리그에 참가하여 15번째의 프로축구단이 되었다. 강원fc는 승강제가 실시되는 2013</p>
+                <p>시즌을 앞두고 10경기 연속 무승을 기록하다 5월 12일 성남을 2-1로 이겼다. 그 후, 무승과 연패가 이어지며 22라운드가 지난 후에는 김학범 감독이 사퇴했고</p>
+                <p>새로운 감독으로 김용갑 감독이 임명되었으나 승강 플레이오프 1, 2차전 패배로 강등되었다. 홈구장인 강릉종합운동장에서는 기존 클럽들의 유럽식 서포팅</p>
+                <p>뿐만 아니라 한국 전통식의 구수한 응원을 들을 수 있다. 현재 강원fc 감독으로는 (전)축구선수인 윤정환 감독이고 주장은 한국영 선수이다.</p>
+            </div>
+        </div>
+
+    </section>
+</main>
