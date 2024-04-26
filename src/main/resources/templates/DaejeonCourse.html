@@ -69,7 +69,7 @@
         <li>
             <a href="#">대전하나시티즌</a>
             <ul>
-                <li><a href="#">맛집</a></li>
+                <li><a href="http://localhost:8080/dfood">맛집</a></li>
                 <li><a href="#">관광지</a></li>
                 <li><a href="#">숙소</a></li>
                 <li><a href="#">코스추천</a></li>
@@ -137,7 +137,7 @@
 <script>
     var container = document.getElementById('map');
     var options = {
-        center: new kakao.maps.LatLng(37.7732204, 128.8973227),
+        center: new kakao.maps.LatLng(36.3652954, 127.324859),
         level: 5
     };
 
@@ -146,32 +146,32 @@
     // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
     var positions = [
         {
-            content: '<div>강릉종합운동장</div>',
-            latlng: new kakao.maps.LatLng(37.7732204, 128.8973227)
+            content: '<div>대전월드컵경기장</div>',
+            latlng: new kakao.maps.LatLng(36.3652954, 127.324859)
         },
         {
-            content: '<div>경포대</div>',
-            latlng: new kakao.maps.LatLng( 37.7950773, 128.8966344)
+            content: '<div>한밭수목원</div>',
+            latlng: new kakao.maps.LatLng(36.3683723, 127.3880555)
         },
         {
-            content: '<div>엄지네 포장마차</div>',
-            latlng: new kakao.maps.LatLng(37.76629399999999 , 128.907042)
+            content: '<div>도군샤부</div>',
+            latlng: new kakao.maps.LatLng(36.350279, 127.3787181)
         },
         {
-            content: '<div>강릉커피거리</div>',
-            latlng: new kakao.maps.LatLng(37.7723486, 128.9476577)
+            content: '<div>대전엑스포아쿠아리움</div>',
+            latlng: new kakao.maps.LatLng(36.3751677, 127.3819045)
         },
         {
-            content: '<div>교동짬뽕</div>',
-            latlng: new kakao.maps.LatLng(37.75734778421943, 128.8874790072441)
+            content: '<div>마쯔미라멘</div>',
+            latlng: new kakao.maps.LatLng(36.36311710315324, 127.35873118042946)
         },
         {
-            content: '<div>강릉시립박물관</div>',
-            latlng: new kakao.maps.LatLng(37.7775849, 128.8772424)
+            content: '<div>대전시민천문대</div>',
+            latlng: new kakao.maps.LatLng(36.38156439999999, 127.353895)
         },
         {
-            content: '<div>벌집칼국수</div>',
-            latlng: new kakao.maps.LatLng(37.7545099 ,  128.8928128)
+            content: '<div>감나무집</div>',
+            latlng: new kakao.maps.LatLng(36.3465604 , 127.2919082)
         }
 
     ];
@@ -210,19 +210,19 @@
     }
 
     var linePath = [
-        new kakao.maps.LatLng(37.7950773, 128.8966344),
-        new kakao.maps.LatLng(37.7732204, 128.8973227),
-        new kakao.maps.LatLng(37.76629399999999 , 128.907042)
+        new kakao.maps.LatLng(36.3652954, 127.324859),
+        new kakao.maps.LatLng(36.350279, 127.3787181),
+        new kakao.maps.LatLng(36.3683723, 127.3880555)
     ];
     var linePath2 = [
-        new kakao.maps.LatLng(37.75734778421943, 128.8874790072441),
-        new kakao.maps.LatLng(37.7732204, 128.8973227),
-        new kakao.maps.LatLng(37.7723486, 128.9476577)
+        new kakao.maps.LatLng(36.3652954, 127.324859),
+        new kakao.maps.LatLng(36.36311710315324, 127.35873118042946),
+        new kakao.maps.LatLng(36.3751677, 127.3819045)
     ];
     var linePath3 = [
-        new kakao.maps.LatLng(37.7775849, 128.8772424),
-        new kakao.maps.LatLng(37.7545099 , 128.8928128),
-        new kakao.maps.LatLng(37.7732204, 128.8973227)
+        new kakao.maps.LatLng(36.3465604, 127.2919082),
+        new kakao.maps.LatLng(36.3652954, 127.324859),
+        new kakao.maps.LatLng(36.38156439999999, 127.353895)
     ];
 
 
@@ -260,7 +260,7 @@
 
 <div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
     <div style="margin: 0 auto; align-content: center; text-align: center;">
-        <b style="color: #FFAE00">1. 경포대 -> 강릉종합운동장 -> 엄지네 포장마차</b>
+        <b style="color: #FFAE00">1. 대전월드컵경기장 -> 도군샤부 -> 한밭수목원</b>
         <p>강릉종합운동장으로 이동하기전 경포대로 먼저 이동합니다. 강릉을 대표하는 명승지중 하나로 고려시대의 문화를 보여주고 있는 관동팔경의</p>
         <p>하나이며 꼭 가봐야하는 관광지로 불리고 있습니다. 구경을 마치고 강릉종합운동장으로 이동해 축구를 관람후 저녁 식사를 하러 엄지네 포장</p>
         <p>마차로 이동합니다. 이곳은 신선한 꼬막과 육회를 맛볼 수 있는 식당입니다. 식사를 마치고 호텔로 돌아갑니다.</p>
@@ -269,7 +269,7 @@
 
 <div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
     <div style="margin: 0 auto; align-content: center; text-align: center;">
-        <b style="color: #75B8FA">2. 교동짬뽕 -> 강릉종합운동장 -> 강릉커피거리</b>
+        <b style="color: #75B8FA">2. 대전월드컵경기장 -> 마쯔미라멘 -> 대전엑스포아쿠아리움</b>
         <p>축구 경기를 관람하기전 먼저 식사를 하러 강릉 교동짬뽕으로 이동합니다. 순두부 짬뽕으로 유명한 맛집으로 사람들에게 많은 인기를 얻고 있는</p>
         <p>식당입니다. 식사를 마치고 강릉종합운동장으로 이동해 축구 경기를 관람한 후 강릉커피거리로 이동해 해변앞 오션뷰 카페로 들어가서 여유있게</p>
         <p>커피를 마신후 근처 산책을 하다가 호텔로 돌아갑니다.</p>
@@ -278,7 +278,7 @@
 
 <div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
     <div style="margin: 0 auto; align-content: center; text-align: center;">
-        <b style="color: #FF3DE5">3. 강릉시립박물관 -> 벌집칼국수 -> 강릉종합운동장</b>
+        <b style="color: #FF3DE5">3. 감나무집 -> 대전월드컵경기장 -> 대전시민천문대</b>
         <p>경기 관람을 마지막 일정으로 두고 우선 강릉시립박물관으로 이동해 강릉의 역사와 문화를 파악하는 시간을 갖습니다. 입장료는 무료이며</p>
         <p>박물관이 있는 오죽헌 내에 율곡기념관과 오죽헌시립박물관까지 관람후 저녁을 미리 먹으러 벌집칼국수로 이동합니다. 이곳은 단일 메뉴인</p>
         <p>장칼국수만 팔고 있으며 현지인도 많이 찾는 맛집입니다. 식사를 마친 후 강릉종합운동장으로 이동하여 축구 경기를 관람한 후 호텔로</p>
