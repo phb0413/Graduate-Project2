@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/jfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -101,12 +104,12 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/gjindex">광주fc</a>
+            <a href="#">광주fc</a>
             <ul>
-                <li><a href="http://localhost:8080/gjfood">맛집</a></li>
-                <li><a href="http://localhost:8080/gjtour">관광지</a></li>
-                <li><a href="http://localhost:8080/gjhome">숙소</a></li>
-                <li><a href="http://localhost:8080/gjcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,38 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<main class="contents">
+    <section id="headling">
+        <div class="detail" style="margin: 0 auto; text-align: center;">
+            <img src="/assets/img/광주패밀리랜드.jpg" style="display: block; margin: 70px auto 70px auto; width: 1050px; height: 400px; margin-left: auto; margin-right: auto">
+            <div class>
+
+                <p>광주패밀리랜드는 광주광역시 북구 우치로에 위치한 호남 최대 규모의 놀이공원으로서 최신 놀이기구 24종, 국내 최대 높이의 관람차 “빅아이” 호남 최장</p>
+                <p>슬로프를 갖춘 눈썰매장, 최첨단 카라반 캠핑장, 각종 공연/오락/체험시설 등을 갖춘 호남 최고의 테마파크입니다. 광주 패밀리랜드 이용권에 경우 광주은행</p>
+                <p>신용/체크카드 사용하는 것이 본인과 동반 1인까지 50% 할인으로 혜택이 가장 큽니다. 운영시간은 매일 10시~18시이며 주차장이 있으며 가족끼리 즐기러</p>
+                <p>오기에 좋습니다. </p>
+
+
+            </div>
+            <img src="/assets/img/국립광주과확관.jpg" style="display: block; margin: 70px auto 70px auto; width: 1050px; height: 400px; margin-left: auto; margin-right: auto">
+            <div class>
+
+                <p>유일한 광주 어린이과학관이 있는 광주국립과학관은 시설 규모나 퀄리티 면에서 국내에서도 손꼽힐 정도로 괜찮은 과학관입니다. 매주 월요일, 신정,</p>
+                <p>명절 당일은 휴무이며 관람 요금은 3관 통합 5,000원/2,000원 입니다. 아이들을 위한 정규 프로그램과 무료 프로그램들이 많으며 직접 체험할 수 있는</p>
+                <p>것들이 많아 아이들의 오감을 자극할 수 있는 곳이기 때문에 아이와 함께 가볼만한 곳입니다. 국립광주과학관은 전시, 교육, 행사, 체험, 캠프, 강연 등을</p>
+                <p>통해 특별한 경험을 선사하고 큰 규모로 만족감까지 느낄 수 있는 곳입니다.</p>
+
+            </div>
+            <img src="/assets/img/광주시립수목원.jpg" style="display: block; margin: 70px auto 70px auto; width: 1050px; height: 400px; margin-left: auto; margin-right: auto">
+            <div class>
+
+                <p>광주시립수목원 입장료는 현재까지는 무료입장으로 운영되고 있고 주차장도 넓게 준비되어 있습니다. 주시립수목원은 온실 정원과 야외 정원으로 나누어</p>
+                <p>져 있으며 곳곳에 독특한 조형물들이 있어 관람하는 재미도 있고 포토존이 있어 사진을 찍기 좋아 가족끼리나 커플끼리도 많이 찾으시는 편입니다. 산책로를</p>
+                <p>따라 계속 걸어가면 기증 수목원과 참여정원 그리고 관목원, 초화원, 감나무 언덕과 사계절 정원을 볼 수 있습니다. 온실 정원 또한 가볍게 구경하기 좋으며</p>
+                <p>곳곳에 포토존이 있어 사진을 찍을 수도 있습니다. 야외에 비해 작은 것이 아쉽지만 사계절 내내 이용할 수 있다는 점이 장점입니다.</p>
+            </div>
+        </div>
+    </section>
+</main>

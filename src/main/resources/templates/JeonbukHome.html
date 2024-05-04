@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box2.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/dfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/dtour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/dhome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/dcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -92,21 +95,21 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/jindex">전북현대</a>
+            <a href="#">전북현대</a>
             <ul>
-                <li><a href="http://localhost:8080/jfood">맛집</a></li>
-                <li><a href="http://localhost:8080/jtour">관광지</a></li>
-                <li><a href="http://localhost:8080/jhome">숙소</a></li>
-                <li><a href="http://localhost:8080/jcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/gjindex">광주fc</a>
+            <a href="#">광주fc</a>
             <ul>
-                <li><a href="http://localhost:8080/gjfood">맛집</a></li>
-                <li><a href="http://localhost:8080/gjtour">관광지</a></li>
-                <li><a href="http://localhost:8080/gjhome">숙소</a></li>
-                <li><a href="http://localhost:8080/gjcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,54 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<body>
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel19.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>베스트웨스턴플러스 전주호텔</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>전라북도 전주 완산구 현무1길 41</b></p>
+            <p><b>베스트 웨스턴 플러스 전주 호텔은 전주고속버스터미널에서 차로 약 10분 거리에 있으며 주변</b></p>
+            <p><b>관광지로는 전주한옥마을이 차로 약 5분, 자만 벽화마을과 자연생태박물관이 차로 약8분 정도</b></p>
+            <p><b>소요됩니다. 수영장과 루프탑은 물론 전주 시내를 한눈에 볼 수 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>113,223원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel20.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>라한호텔 전주</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>전주 완산구 기린대로 85 </b></p>
+             <p><b>전주고속버스터미널에서 차로 약 15분 거리에 있으며 ktx 전주역에서 차로 약 20분 정도 떨어져</b></p>
+             <p><b>있습니다. 관광지로는 경기전과 오목대가 도보 약 5분, 전동성당이 도보 약 10분가량 소요됩니다.</b></p>
+             <p><b>야외 수영장과 북스토어 겸 카페, 피트니스 센터를 이용하실 수 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>156,198원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel21.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>더 메이 호텔</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>전주 덕진구 기린대로 800</b></p>
+            <p><b>전주 고속버스 터미널에서 차로 약 15분, 전주역에서 차로 약 25분 소요됩니다. 주변 명소인 전주</b></p>
+            <p><b>한지 박물관과 전주덕진공원은 차로 약 6분이면 갈 수 있습니다. 호텔에는 에스테틱, 수영장, 연회장,</b></p>
+            <p><b>비즈니스 센터, 피트니스 센터 등 다양한 시설이 갖춰져 있습니다. 또한 한식당과 카페도 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>148,388원</p></b></div>
+</div>
+</body>
