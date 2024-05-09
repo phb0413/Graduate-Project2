@@ -56,16 +56,16 @@
         <nav class="top-bar__menu-box-1">
             <ul>
                 <li>
-                    <a href="http://localhost:8080/sfood">맛집</a>
+                    <a href="http://localhost:8080/">맛집</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/stour">관광지</a>
+                    <a href="http://localhost:8080/">관광지</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/shome">숙소</a>
+                    <a href="http://localhost:8080/">숙소</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/scourse">코스추천</a>
+                    <a href="http://localhost:8080/">코스추천</a>
                 </li>
             </ul>
         </nav>
@@ -206,11 +206,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="sRestaurants : ${sRestaurants}">
-        <td th:text="${sRestaurants.name}"></td>
-        <td><img th:src="${sRestaurants.imageUrl}" width="100px" height="100px"></td>
-        <td th:text="${sRestaurants.category}"></td>
-        <td th:text="${sRestaurants.rating}"></td>
+    <tr th:each="pRestaurants : ${pRestaurants}">
+        <td th:text="${pRestaurants.name}"></td>
+        <td><img th:src="${pRestaurants.imageUrl}" width="100px" height="100px"></td>
+        <td th:text="${pRestaurants.category}"></td>
+        <td th:text="${pRestaurants.rating}"></td>
     </tr>
     </tbody>
 </table>
@@ -220,8 +220,8 @@
 <script>
     var container = document.getElementById('map');
     var options = {
-        center: new kakao.maps.LatLng( 37.297749, 127.0113456),
-        level: 4
+        center: new kakao.maps.LatLng(35.9977189, 129.3844018),
+        level: 7
     };
 
     var map = new kakao.maps.Map(container, options);
@@ -229,34 +229,45 @@
     // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
     var positions = [
         {
-            content: '<div>유치회관</div>',
-            latlng: new kakao.maps.LatLng(37.25880338373601 , 127.03210115432739)
+            content: '<div>수가성순두부</div>',
+            latlng: new kakao.maps.LatLng(35.96189160000001, 129.4055549)
         },
         {
-            content: '<div>연밀 수원</div>',
-            latlng: new kakao.maps.LatLng(37.28131782764072, 127.01738655567169)
+            content: '<div>온센 포항점</div>',
+            latlng: new kakao.maps.LatLng(36.0590365, 129.3785895)
         },
         {
-            content: '<div>정돈 광교</div>',
-            latlng: new kakao.maps.LatLng(37.28517414874996, 127.05687940120697)
+            content: '<div>수가성 장성점</div>',
+            latlng: new kakao.maps.LatLng(36.0767449,129.3866861)
         },
         {
-            content: '<div>평장원 남문점</div>',
-            latlng: new kakao.maps.LatLng(37.2745968 , 127.0190287)
+            content: '<div>고피자 포항문덕점</div>',
+            latlng: new kakao.maps.LatLng(35.9649693,129.4032292)
         },
         {
-            content: '<div>난 인계동</div>',
-            latlng: new kakao.maps.LatLng(37.2643452 , 127.0350581)
+            content: '<div>스고이라멘 포항</div>',
+            latlng: new kakao.maps.LatLng(36.0786587, 129.400315)
         },
         {
-            content: '<div>가보정 수원</div>',
-            latlng: new kakao.maps.LatLng(37.2741957 , 127.0287047)
+            content: '<div>바른한우 포항</div>',
+            latlng: new kakao.maps.LatLng(36.014814 ,129.3521773)
         },
         {
-            content: '<div>용성통닭 수원</div>',
-            latlng: new kakao.maps.LatLng(37.27958060459911, 127.017622590065)
+            content: '<div>꽃돼지식당 영일대</div>',
+            latlng: new kakao.maps.LatLng(36.0589087 ,129.3784695)
+        },
+        {
+            content: '<div>올리앤 포항</div>',
+            latlng: new kakao.maps.LatLng(36.0662904 ,129.3624234)
+        },
+        {
+            content: '<div>화목정 남구점</div>',
+            latlng: new kakao.maps.LatLng(36.0173356 ,129.3409705)
+        },
+        {
+            content: '<div>포항 바다원해</div>',
+            latlng: new kakao.maps.LatLng(36.070031 ,129.401292)
         }
-
     ];
 
     for (var i = 0; i < positions.length; i ++) {

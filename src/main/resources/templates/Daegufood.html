@@ -56,16 +56,16 @@
         <nav class="top-bar__menu-box-1">
             <ul>
                 <li>
-                    <a href="http://localhost:8080/sfood">맛집</a>
+                    <a href="http://localhost:8080/">맛집</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/stour">관광지</a>
+                    <a href="http://localhost:8080/">관광지</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/shome">숙소</a>
+                    <a href="http://localhost:8080/">숙소</a>
                 </li>
                 <li>
-                    <a href="http://localhost:8080/scourse">코스추천</a>
+                    <a href="http://localhost:8080/">코스추천</a>
                 </li>
             </ul>
         </nav>
@@ -206,11 +206,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="sRestaurants : ${sRestaurants}">
-        <td th:text="${sRestaurants.name}"></td>
-        <td><img th:src="${sRestaurants.imageUrl}" width="100px" height="100px"></td>
-        <td th:text="${sRestaurants.category}"></td>
-        <td th:text="${sRestaurants.rating}"></td>
+    <tr th:each="dgRestaurants : ${dgRestaurants}">
+        <td th:text="${dgRestaurants.name}"></td>
+        <td><img th:src="${dgRestaurants.imageUrl}" width="100px" height="100px"></td>
+        <td th:text="${dgRestaurants.category}"></td>
+        <td th:text="${dgRestaurants.rating}"></td>
     </tr>
     </tbody>
 </table>
@@ -220,8 +220,8 @@
 <script>
     var container = document.getElementById('map');
     var options = {
-        center: new kakao.maps.LatLng( 37.297749, 127.0113456),
-        level: 4
+        center: new kakao.maps.LatLng(35.8812441, 128.5882175),
+        level: 7
     };
 
     var map = new kakao.maps.Map(container, options);
@@ -229,34 +229,45 @@
     // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
     var positions = [
         {
-            content: '<div>유치회관</div>',
-            latlng: new kakao.maps.LatLng(37.25880338373601 , 127.03210115432739)
+            content: '<div>칸다소바 동성로점</div>',
+            latlng: new kakao.maps.LatLng(35.868751644229114, 128.5939460992813)
         },
         {
-            content: '<div>연밀 수원</div>',
-            latlng: new kakao.maps.LatLng(37.28131782764072, 127.01738655567169)
+            content: '<div>마쯔리스시 동성로점</div>',
+            latlng: new kakao.maps.LatLng(35.8657174, 128.5958296)
         },
         {
-            content: '<div>정돈 광교</div>',
-            latlng: new kakao.maps.LatLng(37.28517414874996, 127.05687940120697)
+            content: '<div>대쿠이 본점</div>',
+            latlng: new kakao.maps.LatLng(35.856353512286915,128.58850825577974)
         },
         {
-            content: '<div>평장원 남문점</div>',
-            latlng: new kakao.maps.LatLng(37.2745968 , 127.0190287)
+            content: '<div>미진분식 동성로점</div>',
+            latlng: new kakao.maps.LatLng(35.867430924778006,128.59428338706493)
         },
         {
-            content: '<div>난 인계동</div>',
-            latlng: new kakao.maps.LatLng(37.2643452 , 127.0350581)
+            content: '<div>스시라스또 동성로점</div>',
+            latlng: new kakao.maps.LatLng(35.8684486, 128.5981625)
         },
         {
-            content: '<div>가보정 수원</div>',
-            latlng: new kakao.maps.LatLng(37.2741957 , 127.0287047)
+            content: '<div>큰나무집 가창</div>',
+            latlng: new kakao.maps.LatLng(35.73349764949774 ,128.65959584712982)
         },
         {
-            content: '<div>용성통닭 수원</div>',
-            latlng: new kakao.maps.LatLng(37.27958060459911, 127.017622590065)
+            content: '<div>라마앤바바나 대구</div>',
+            latlng: new kakao.maps.LatLng(35.8655331 ,128.5970898)
+        },
+        {
+            content: '<div>연경반점 대구</div>',
+            latlng: new kakao.maps.LatLng(35.84522046845015 ,128.61308701336384)
+        },
+        {
+            content: '<div>이가네더덕밥</div>',
+            latlng: new kakao.maps.LatLng(35.93880920501344 ,128.60402584075928)
+        },
+        {
+            content: '<div>샤브향 대구</div>',
+            latlng: new kakao.maps.LatLng(35.7818848 ,128.4406707)
         }
-
     ];
 
     for (var i = 0; i < positions.length; i ++) {
