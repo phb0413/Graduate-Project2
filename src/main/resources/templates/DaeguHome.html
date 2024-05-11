@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box2.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/gjfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjtour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjhome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -110,21 +113,21 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/dgindex">대구fc</a>
+            <a href="#">대구fc</a>
             <ul>
-                <li><a href="http://localhost:8080/dgfood">맛집</a></li>
-                <li><a href="http://localhost:8080/dgtour">관광지</a></li>
-                <li><a href="http://localhost:8080/dghome">숙소</a></li>
-                <li><a href="http://localhost:8080/dgcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/pindex">포항스틸러스</a>
+            <a href="#">포항스틸러스</a>
             <ul>
-                <li><a href="http://localhost:8080/pfood">맛집</a></li>
-                <li><a href="http://localhost:8080/ptour">관광지</a></li>
-                <li><a href="http://localhost:8080/phome">숙소</a></li>
-                <li><a href="http://localhost:8080/pcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,54 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<body>
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel25.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>대구 메리어트 호텔</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>대구 동구 동부로 26길 6</b></p>
+            <p><b>대구 최초의 메리어트 인터내셔널 5성급 호텔로서 비즈니스 고객들께 적합한 서비스를 제공합니다.</b></p>
+            <p><b>동대구역 2번 출구까지 도보로 약 10분이면 이동 가능하며 주변 관광지인 아쿠아리움과 신세계</b></p>
+            <p><b>백화점은 도보로 약 5분이면 갈 수 있습니다. 최첨단 시설과 피트니스, 미팅룸까지 갖추고 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>250,000원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel26.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p>호텔 수성</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>대구 수성구 용학로 106-7</b></p>
+             <p><b>대구 수성못역에서 도보로 약 15분 거리에 있으며 KTX 동대구역은 차로 약 20분 거리에 있습니다.</b></p>
+             <p><b>주변 명소인 수성못이 도보로 5분이면 갈 수 있으며 약 3000평의 대규모 허브정원인 힐크레스트는</b></p>
+             <p><b>차로 10분이며 호텔에 실내 온천이 있으며 사우나, 피트니스센터 등 다양한 즐길 거리가 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>151,759원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel27.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>호텔 인터불고 대구</b></p>
+            <p><b>* * * * *</b></p>
+            <p><b>대구 수성구 팔현길 212</b></p>
+            <p><b>동대구복합환승센터에서 차로 약 10분 거리이며 대구 국제공항에서 약 15분 거리에 있습니다. 주변</b></p>
+            <p><b>명소인 수성패밀리 파크는 차로 약 3분, 금호강 생태공원은 차로 약 5분이며 대구스타디움은 차로</b></p>
+            <p><b>약 10분 걸립니다. 호텔에는 수영장, 스크린 골프, 노래방, 피트니스 센터 등 즐길 거리가 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>115,702원</p></b></div>
+</div>
+</body>

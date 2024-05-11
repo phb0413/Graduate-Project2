@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/gjfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjtour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjhome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -110,21 +113,21 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/dgindex">대구fc</a>
+            <a href="#">대구fc</a>
             <ul>
-                <li><a href="http://localhost:8080/dgfood">맛집</a></li>
-                <li><a href="http://localhost:8080/dgtour">관광지</a></li>
-                <li><a href="http://localhost:8080/dghome">숙소</a></li>
-                <li><a href="http://localhost:8080/dgcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/pindex">포항스틸러스</a>
+            <a href="#">포항스틸러스</a>
             <ul>
-                <li><a href="http://localhost:8080/pfood">맛집</a></li>
-                <li><a href="http://localhost:8080/ptour">관광지</a></li>
-                <li><a href="http://localhost:8080/phome">숙소</a></li>
-                <li><a href="http://localhost:8080/pcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,20 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<main class="contents">
+    <section id="headling">
+        <div class="detail" style="margin: 0 auto; text-align: center;">
+            <img src="/assets/img/포항스틸야드.jpg" style="display: block; margin: 80px auto 80px auto; width:900px; height:300px; margin-left: auto; margin-right: auto">
+            <div class = "box">
+                <p>대한민국에서 가장 오래된 프로 축구단으로 정말 많은 국가대표 선수들을 배출했다. 51년의 역사와 함께 K리그1 5회 우승(1986, 1988, 1992, 2007, 2013),</p>
+                <p>코리아컵 5회 최다 우승(1996, 2008, 2012, 2013, 2023), AFC 챔피언스 리그 3회 우승(1996-97, 1997-98, 2009) 기록을 가지고 있습니다. 아울러 10년대마다</p>
+                <p>주요 대회 우승컵을 한 번 이상 들어올린 K리그 유일의 구단이기도 하다. 1973년 창단 이래로 줄곧 강호 구단이었으며 K리그 출범 원년부터 현재까지 한번도</p>
+                <p>강등 당하지 않고 1부 리그에서 활동하고 있는 유일한 구단이다. 또한 K리그에서 최초로 유소년 시스템을 구축했고, 자타공인 K리그 최고의 유소년 시스템을</p>
+                <p>보유하고 있다. 현재 전 축구선수인 박태하 감독이 지휘중이며 주장은 완델손 선수가 맡고 있다.</p>
+            </div>
+        </div>
+
+    </section>
+</main>

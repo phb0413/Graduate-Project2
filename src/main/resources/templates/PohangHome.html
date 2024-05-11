@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box2.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/gjfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjtour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjhome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/gjcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -110,21 +113,21 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/dgindex">대구fc</a>
+            <a href="#">대구fc</a>
             <ul>
-                <li><a href="http://localhost:8080/dgfood">맛집</a></li>
-                <li><a href="http://localhost:8080/dgtour">관광지</a></li>
-                <li><a href="http://localhost:8080/dghome">숙소</a></li>
-                <li><a href="http://localhost:8080/dgcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/pindex">포항스틸러스</a>
+            <a href="#">포항스틸러스</a>
             <ul>
-                <li><a href="http://localhost:8080/pfood">맛집</a></li>
-                <li><a href="http://localhost:8080/ptour">관광지</a></li>
-                <li><a href="http://localhost:8080/phome">숙소</a></li>
-                <li><a href="http://localhost:8080/pcourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
@@ -147,35 +150,54 @@
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<body>
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel28.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>브라운도트 호텔</b></p>
+            <p><b>* *</b></p>
+            <p><b>포항시 북구 삼호로 166-1</b></p>
+            <p><b>숙소는 영일대해수욕장에서 1분 거리, 포항 송도해수욕장에서 2.9km 거리에 있습니다. 바다 전망을</b></p>
+            <p><b>갖춘 발코니, 숙소의 숙박 옵션에는 비데, 무료 세면도구 등을 갖춘 전용 욕실, 평면 TV, 에어컨이 마</b></p>
+            <p><b>련되어 있으며 일부 객실에는 테라스 등이 구비되어 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>119,000원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel29.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p>라한 호텔</b></p>
+            <p><b>* * *</b></p>
+            <p><b>포항시 북구 삼호로265번길 1</b></p>
+             <p><b>라한호텔 포항은 동해 조망권을 갖추고 있으며, 영일대해수욕장는 도보로 약 5분, 포항 여객선 터미</b></p>
+             <p><b>널과 영일만 관광 유람 선착장은 도보로 약 20분이면 갈 수 있습니다. 호텔에는 비즈니스 센터와 연</b></p>
+             <p><b>회장이 마련되어 있으며 오전에는 조식 뷔페를, 점심 저녁에는 모임과 행사 장소로 사용 가능합니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>148,758원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel30.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>포항 에이원 호텔</b></p>
+            <p><b>* * *</b></p>
+            <p><b>포항 남구 중앙로 140</b></p>
+            <p><b>숙소는 포항 송도해수욕장에서 2.1km, 경주월드에서 31km 거리에 있습니다. 호텔에는 에어컨, 무료</b></p>
+            <p><b>wi-fi가 완비된 객실과 레스토랑 등을 제공합니다. 각 객실에는 전용 욕실이 마련되어 있습니다. 구내</b></p>
+            <p><b>에는 전용 주차장이 마련되어 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>83,000원</p></b></div>
+</div>
+</body>
