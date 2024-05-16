@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/topmenu.css">
+    <link rel="stylesheet" href="/assets/css/sidemenu.css">
+    <link rel="stylesheet" href="/assets/css/slide.css">
+    <link rel="stylesheet" href="/assets/js/script.js">
+    <link rel="stylesheet" href="/assets/css/sitebox.css">
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .text {
+            margin-right: 10px; /* 텍스트와 버튼 간의 간격을 조절합니다. */
+        }
+
+        .button {
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        <!--
+        body {
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
+        }
+
+        table {
+            width: 40%;
+            height: 40%;
+            border: 1px solid #444444;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #map {
+            margin-right: 30px;
+            float: right;
+        }
+
+        -->
+    </style>
+    <title></title>
+</head>
+<body>
+<header class="top-bar con-min-width">
+    <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/pfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/ptour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/phome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/pcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<aside class="side-bar">
+
+    <ul>
+        <li>
+            <a href="http://localhost:8080/Page">fc서울</a>
+            <ul>
+                <li><a href="http://localhost:8080/food">맛집</a></li>
+                <li><a href="http://localhost:8080/SeoulTour">관광지</a></li>
+                <li><a href="http://localhost:8080/SeoulHome">숙소</a></li>
+                <li><a href="http://localhost:8080/SeoulCourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/kindex">김천상무</a>
+            <ul>
+                <li><a href="http://localhost:8080/kfood">맛집</a></li>
+                <li><a href="http://localhost:8080/ktour">관광지</a></li>
+                <li><a href="http://localhost:8080/khome">숙소</a></li>
+                <li><a href="http://localhost:8080/kcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/sindex">수원fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/sfood">맛집</a></li>
+                <li><a href="http://localhost:8080/stour">관광지</a></li>
+                <li><a href="http://localhost:8080/shome">숙소</a></li>
+                <li><a href="http://localhost:8080/scourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/iindex">인천유나이티드</a>
+            <ul>
+                <li><a href="http://localhost:8080/ifood">맛집</a></li>
+                <li><a href="http://localhost:8080/itour">관광지</a></li>
+                <li><a href="http://localhost:8080/ihome">숙소</a></li>
+                <li><a href="http://localhost:8080/icourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/gindex">강원fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/gfood">맛집</a></li>
+                <li><a href="http://localhost:8080/gtour">관광지</a></li>
+                <li><a href="http://localhost:8080/ghome">숙소</a></li>
+                <li><a href="http://localhost:8080/gcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/dindex">대전하나시티즌</a>
+            <ul>
+                <li><a href="http://localhost:8080/dfood">맛집</a></li>
+                <li><a href="http://localhost:8080/dtour">관광지</a></li>
+                <li><a href="http://localhost:8080/dhome">숙소</a></li>
+                <li><a href="http://localhost:8080/dcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/jindex">전북현대</a>
+            <ul>
+                <li><a href="http://localhost:8080/jfood">맛집</a></li>
+                <li><a href="http://localhost:8080/jtour">관광지</a></li>
+                <li><a href="http://localhost:8080/jhome">숙소</a></li>
+                <li><a href="http://localhost:8080/jcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/gjindex">광주fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/gjfood">맛집</a></li>
+                <li><a href="http://localhost:8080/gjtour">관광지</a></li>
+                <li><a href="http://localhost:8080/gjhome">숙소</a></li>
+                <li><a href="http://localhost:8080/gjcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/dgindex">대구fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/dgfood">맛집</a></li>
+                <li><a href="http://localhost:8080/dgtour">관광지</a></li>
+                <li><a href="http://localhost:8080/dghome">숙소</a></li>
+                <li><a href="http://localhost:8080/dgcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/pindex">포항스틸러스</a>
+            <ul>
+                <li><a href="http://localhost:8080/pfood">맛집</a></li>
+                <li><a href="http://localhost:8080/ptour">관광지</a></li>
+                <li><a href="http://localhost:8080/phome">숙소</a></li>
+                <li><a href="http://localhost:8080/pcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">울산현대</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">제주유나이티드</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+<div class="site-box">
+    <div class="container">
+        <!-- < 여기에 사이트 내용을 추가할 수 있습니다.> -->
+        <h1>김천 추천 맛집</h1>
+        <button class="button">* 현 위치</button>
+    </div>
+</div>
+
+<b><p th:align="center">가족들 및 지인들과 함께하기 좋은 식당으로 너무 가볍지도 않으며 든든한 한끼를 할 수 있는 식당들</p></b>
+
+<b><p th:align="center">혼자 여행온 사람들을 위한 식당으로 너무 과하지도 않으며 시끄럽지 않은 분위기로 부담없이 맛있는 식사를 즐길 수 있는 식당들 입니다.</p></b>
+
+<table th:align="right">
+    <thead>
+    <tr>
+        <th>상호명</th>
+        <th>이미지</th>
+        <th>카테고리</th>
+        <th>별점</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="uRestaurants : ${uRestaurants}">
+        <td th:text="${uRestaurants.name}"></td>
+        <td><img th:src="${uRestaurants.imageUrl}" width="100px" height="100px"></td>
+        <td th:text="${uRestaurants.category}"></td>
+        <td th:text="${uRestaurants.rating}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<div id="map" style="width:800px;height:800px;"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f5b93b38400f8a439279bddc0851658c"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(35.5352422, 129.2595839),
+        level: 7
+    };
+
+    var map = new kakao.maps.Map(container, options);
+
+    // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
+    var positions = [
+        {
+            content: '<div>봉구스밥버거 공업탑점</div>',
+            latlng: new kakao.maps.LatLng(35.5321604, 129.3091749)
+        },
+        {
+            content: '<div>우미학 울산</div>',
+            latlng: new kakao.maps.LatLng(35.5396245, 129.3357906)
+        },
+        {
+            content: '<div>라멘집입니다 울산무거점</div>',
+            latlng: new kakao.maps.LatLng(35.5404669,129.2624084)
+        },
+        {
+            content: '<div>홍콩반점0410 울산삼산점</div>',
+            latlng: new kakao.maps.LatLng(35.5423661,129.3376704)
+        },
+        {
+            content: '<div>본죽앤비빔밥 울산강동산하</div>',
+            latlng: new kakao.maps.LatLng(35.6207175, 129.4405352)
+        },
+        {
+            content: '<div>누마루 울산</div>',
+            latlng: new kakao.maps.LatLng(35.5502142, 129.2628156)
+        },
+        {
+            content: '<div>언양기와집 불고기 울산</div>',
+            latlng: new kakao.maps.LatLng(35.5653221 ,129.122179)
+        },
+        {
+            content: '<div>길섶한우 호계점</div>',
+            latlng: new kakao.maps.LatLng(35.631726 ,129.3636976)
+        },
+        {
+            content: '<div>솔밭가든 울산</div>',
+            latlng: new kakao.maps.LatLng(35.5813053 ,129.3209753)
+        },
+        {
+            content: '<div>일품장어 울산</div>',
+            latlng: new kakao.maps.LatLng(35.5684174,129.2416415)
+        }
+    ];
+
+    for (var i = 0; i < positions.length; i ++) {
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng // 마커의 위치
+        });
+
+        // 마커에 표시할 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: positions[i].content // 인포윈도우에 표시할 내용
+        });
+
+        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+        // 이벤트 리스너로는 클로저를 만들어 등록합니다
+        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    }
+
+    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+    function makeOverListener(map, marker, infowindow) {
+        return function() {
+            infowindow.open(map, marker);
+        };
+    }
+
+    // 인포윈도우를 닫는 클로저를 만드는 함수입니다
+    function makeOutListener(infowindow) {
+        return function() {
+            infowindow.close();
+        };
+    }
+</script>
+</body>
+</html>
