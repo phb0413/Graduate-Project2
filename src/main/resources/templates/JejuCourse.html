@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축구 여행 가이드</title>
+    <link rel="stylesheet" href="/assets/css/topmenu.css">
+    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="/assets/css/sidemenu.css">
+    <style>
+        body{
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+<header class="top-bar con-min-width">
+    <h1><span style="color:black">Soccer Tour Guide</span></h1>
+</header>
+
+<aside class="side-bar">
+    <ul>
+        <li>
+            <a href="http://localhost:8080/Page">fc서울</a>
+            <ul>
+                <li><a href="http://localhost:8080/food">맛집</a></li>
+                <li><a href="http://localhost:8080/SeoulTour">관광지</a></li>
+                <li><a href="http://localhost:8080/SeoulHome">숙소</a></li>
+                <li><a href="http://localhost:8080/SeoulCourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/kindex">김천상무</a>
+            <ul>
+                <li><a href="http://localhost:8080/kfood">맛집</a></li>
+                <li><a href="http://localhost:8080/ktour">관광지</a></li>
+                <li><a href="http://localhost:8080/khome">숙소</a></li>
+                <li><a href="http://localhost:8080/kcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/sindex">수원fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/sfood">맛집</a></li>
+                <li><a href="http://localhost:8080/stour">관광지</a></li>
+                <li><a href="http://localhost:8080/shome">숙소</a></li>
+                <li><a href="http://localhost:8080/scourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/iindex">인천유나이티드</a>
+            <ul>
+                <li><a href="http://localhost:8080/ifood">맛집</a></li>
+                <li><a href="http://localhost:8080/itour">관광지</a></li>
+                <li><a href="http://localhost:8080/ihome">숙소</a></li>
+                <li><a href="http://localhost:8080/icourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/gindex">강원fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/gfood">맛집</a></li>
+                <li><a href="http://localhost:8080/gtour">관광지</a></li>
+                <li><a href="http://localhost:8080/ghome">숙소</a></li>
+                <li><a href="http://localhost:8080/gcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/dindex">대전하나시티즌</a>
+            <ul>
+                <li><a href="http://localhost:8080/dfood">맛집</a></li>
+                <li><a href="http://localhost:8080/dtour">관광지</a></li>
+                <li><a href="http://localhost:8080/dhome">숙소</a></li>
+                <li><a href="http://localhost:8080/dcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/jindex">전북현대</a>
+            <ul>
+                <li><a href="http://localhost:8080/jfood">맛집</a></li>
+                <li><a href="http://localhost:8080/jtour">관광지</a></li>
+                <li><a href="http://localhost:8080/jhome">숙소</a></li>
+                <li><a href="http://localhost:8080/jcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/gjindex">광주fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/gjfood">맛집</a></li>
+                <li><a href="http://localhost:8080/gjtour">관광지</a></li>
+                <li><a href="http://localhost:8080/gjhome">숙소</a></li>
+                <li><a href="http://localhost:8080/gjcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/dgindex">대구fc</a>
+            <ul>
+                <li><a href="http://localhost:8080/dgfood">맛집</a></li>
+                <li><a href="http://localhost:8080/dgtour">관광지</a></li>
+                <li><a href="http://localhost:8080/dghome">숙소</a></li>
+                <li><a href="http://localhost:8080/dgcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://localhost:8080/pindex">포항스틸러스</a>
+            <ul>
+                <li><a href="http://localhost:8080/pfood">맛집</a></li>
+                <li><a href="http://localhost:8080/ptour">관광지</a></li>
+                <li><a href="http://localhost:8080/phome">숙소</a></li>
+                <li><a href="http://localhost:8080/pcourse">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">울산현대</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">제주유나이티드</a>
+            <ul>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+
+<div id="map" style="width:800px;height:600px; margin: 0 auto;"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f5b93b38400f8a439279bddc0851658c"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(33.2461852, 126.5093244),
+        level: 5
+    };
+
+    var map = new kakao.maps.Map(container, options);
+
+    // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
+    var positions = [
+        {
+            content: '<div>제주월드컵경기장</div>',
+            latlng: new kakao.maps.LatLng(33.2461852, 126.5093244)
+        },
+        {
+            content: '<div>아쿠아플레넷</div>',
+            latlng: new kakao.maps.LatLng(33.4327833 , 126.9278223)
+        },
+        {
+            content: '<div>해월향 제주</div>',
+            latlng: new kakao.maps.LatLng(33.4468834,126.9144242)
+        },
+        {
+            content: '<div>오설록 티 뮤지엄</div>',
+            latlng: new kakao.maps.LatLng(33.30594380000001, 126.289437)
+        },
+        {
+            content: '<div>사계의 시간 제주</div>',
+            latlng: new kakao.maps.LatLng(33.23227,126.3089904)
+        },
+        {
+            content: '<div>카멜리아힐</div>',
+            latlng: new kakao.maps.LatLng(33.2898049, 126.3682983)
+        },
+        {
+            content: '<div>갈치왕 중문점</div>',
+            latlng: new kakao.maps.LatLng(33.2646227 ,126.3908426)
+        }
+
+    ];
+
+    for (var i = 0; i < positions.length; i ++) {
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng // 마커의 위치
+        });
+
+        // 마커에 표시할 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: positions[i].content // 인포윈도우에 표시할 내용
+        });
+
+        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+        // 이벤트 리스너로는 클로저를 만들어 등록합니다
+        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    }
+
+    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+    function makeOverListener(map, marker, infowindow) {
+        return function() {
+            infowindow.open(map, marker);
+        };
+    }
+
+    // 인포윈도우를 닫는 클로저를 만드는 함수입니다
+    function makeOutListener(infowindow) {
+        return function() {
+            infowindow.close();
+        };
+    }
+
+    var linePath = [
+        new kakao.maps.LatLng(33.4327833 , 126.9278223),
+        new kakao.maps.LatLng(33.4468834,126.9144242),
+        new kakao.maps.LatLng(33.2461852, 126.5093244)
+    ];
+    var linePath2 = [
+        new kakao.maps.LatLng(33.30594380000001, 126.289437),
+        new kakao.maps.LatLng(33.23227,126.3089904),
+        new kakao.maps.LatLng(33.2461852, 126.5093244)
+    ];
+    var linePath3 = [
+        new kakao.maps.LatLng(33.2898049, 126.3682983),
+        new kakao.maps.LatLng(33.2646227 ,126.3908426),
+        new kakao.maps.LatLng(33.2461852, 126.5093244)
+    ];
+
+
+    // 지도에 표시할 선을 생성합니다
+    var polyline = new kakao.maps.Polyline({
+        path: linePath, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#FFAE00', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+
+    var polyline2 = new kakao.maps.Polyline({
+        path: linePath2, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#75B8FA', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+
+    var polyline3 = new kakao.maps.Polyline({
+        path: linePath3, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#FF3DE5', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+
+    // 지도에 선을 표시합니다
+    polyline.setMap(map);
+    polyline2.setMap(map);
+    polyline3.setMap(map);
+
+</script>
+
+<div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
+    <div style="margin: 0 auto; align-content: center; text-align: center;">
+        <b style="color: #FFAE00">1. 아쿠아플라넷 -> 해월향 -> 제주월드컵경기장</b>
+        <p>경기를 관람하기 전 먼저 구룡포일본인가옥거리로 이동합니다. 이곳은 드라마 촬영지로 사용되어 인기 명소로 자리 잡았으며 공원 계단에서</p>
+        <p>내려다본 어촌풍경은 대한민국 경관대상을 받은 곳이기도합니다. 구경을 마친 후 식사를 하러 수가성순두부로 이동합니다. 이곳은 순두부</p>
+        <p>찌개 맛집으로 그 종류들도 다양합니다. 그래서 기호에 맞게 주문해 먹을 수 있습니다. 식사를 마치고 경기를 관람하러 포항스틸야드로 이동</p>
+        <p>합니다. 경기를 관람한 후 호텔로 이동합니다.</p>
+    </div>
+</div>
+
+<div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
+    <div style="margin: 0 auto; align-content: center; text-align: center;">
+        <b style="color: #75B8FA">2. 오설록 티 뮤지엄 -> 사계의 시간 -> 제주월드컵경기장</b>
+        <p>먼저 축구를 관람하기 전에 호미곶광장으로 이동합니다. 이곳은 한반도 지형상 호랑이 꼬리에 해당하는 곳이며 호미곶을 상징하는 상생의 손도</p>
+        <p>보실 수 있습니다. 구경을 마치고 축구를 관람하러 포항스틸야드로 이동합니다. 재밌게 축구를 관람했다면 숙소로 돌아가기 전 저녁식사를 하러</p>
+        <p>바른한우로 이동합니다. 룸으로 되어있어 모임하기도 좋고 고기도 신선해 맛 또한 아주 좋은 편입니다. 식사를 마치고 숙소로 돌아갑니다.</p>
+    </div>
+</div>
+
+<div style="border: 1px solid black; padding: 10px; margin: 50px auto; align-content: center; width: 700px;">
+    <div style="margin: 0 auto; align-content: center; text-align: center;">
+        <b style="color: #FF3DE5">3. 카멜리아 힐 -> 갈치왕 중문점 -> 제주월드컵경기장</b>
+        <p>먼저 축구를 관람하기 전에 연오랑세오녀테마공원으로 이동합니다. 이곳은 해안 도로를 따라 이어지는 길 중간에 위치해 있어서 포항 드라이브</p>
+        <p>코스로 찾아가는 사람들도 많으며 역사적 전시품들과 영상, 교육, 체험 프로그램이 함께 운영되는 큰 전시관도 있습니다. 시간을 보낸 후 축구</p>
+        <p>경기를 관람하러 포항스틸야드로 이동해 축구를 관람한 후 저녁 식사를 하러 꽃돼지식당으로 이동합니다. 아주 맛있는 꽃삼겹살을 맛보실 수</p>
+        <p>있습니다. 또한 사이드 메뉴들도 맛이 좋은 편입니다. 식사를 마치고 숙소로 돌아갑니다.</p>
+    </div>
+</div>
+
+</body>
+</html>

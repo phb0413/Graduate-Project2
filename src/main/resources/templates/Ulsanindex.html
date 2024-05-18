@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/pfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/ptour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/phome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/pcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -128,54 +131,39 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/uindex">울산현대</a>
+            <a href="#">울산현대</a>
             <ul>
-                <li><a href="http://localhost:8080/ufood">맛집</a></li>
-                <li><a href="http://localhost:8080/utour">관광지</a></li>
-                <li><a href="http://localhost:8080/uhome">숙소</a></li>
-                <li><a href="http://localhost:8080/ucourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/jeindex">제주유나이티드</a>
+            <a href="#">제주유나이티드</a>
             <ul>
-                <li><a href="http://localhost:8080/jefood">맛집</a></li>
-                <li><a href="http://localhost:8080/jetour">관광지</a></li>
-                <li><a href="http://localhost:8080/jehome">숙소</a></li>
-                <li><a href="http://localhost:8080/jecourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<main class="contents">
+    <section id="headling">
+        <div class="detail" style="margin: 0 auto; text-align: center;">
+            <img src="/assets/img/울산문수축구경기장.jpg" style="display: block; margin: 80px auto 80px auto; width:900px; height:300px; margin-left: auto; margin-right: auto">
+            <div class = "box">
+                <p>울산 HD FC는 1983년에 창단된 울산광역시를 연고로 하는 K리그1 소속의 프로 축구단으로 홈구장은 울산문수축구경기장이다. 창단 당시 명칭은 울산 현대</p>
+                <p>FC 였으며, 모기업인 현대중공업그룹이 2023년에 HD 브랜드를 도입하면서 구단 명칭 역시 현재의 명칭으로 바뀌었다. AFC 챔피언스 리그 2회 우승(2012,</p>
+                <p>2020)과 아시아 유일의 ACL 2회 무패 우승, K리그1 4회 우승(1996, 2005, 2022, 2023)과 10회 최다 준우승(1988, 1991, 1998, 2002, 2003, 2011, 2013, 20</p>
+                <p>19, 2020, 2021), 코리아컵 1회 우승(2017) 타이틀을 가지고 있다. 또한 4년제로 개편된 FIFA 클럽 월드컵에 K리그 구단 최초로 참가를 확정지은 구단 이기도</p>
+                <p>하다. 현재 울산현대 감독은 전 축구선수 홍명보 감독이 맡고 있으며 주장은 김기희 선수가 맡고 있습니다.</p>
+            </div>
+        </div>
+
+    </section>
+</main>

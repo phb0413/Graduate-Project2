@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/pfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/ptour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/phome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/pcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -128,54 +131,58 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/uindex">울산현대</a>
+            <a href="#">울산현대</a>
             <ul>
-                <li><a href="http://localhost:8080/ufood">맛집</a></li>
-                <li><a href="http://localhost:8080/utour">관광지</a></li>
-                <li><a href="http://localhost:8080/uhome">숙소</a></li>
-                <li><a href="http://localhost:8080/ucourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/jeindex">제주유나이티드</a>
+            <a href="#">제주유나이티드</a>
             <ul>
-                <li><a href="http://localhost:8080/jefood">맛집</a></li>
-                <li><a href="http://localhost:8080/jetour">관광지</a></li>
-                <li><a href="http://localhost:8080/jehome">숙소</a></li>
-                <li><a href="http://localhost:8080/jecourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<main class="contents">
+    <section id="headling">
+        <div class="detail" style="margin: 0 auto; text-align: center;">
+            <img src="/assets/img/태화강%20국가정원.jpg" style="display: block; margin: 70px auto 70px auto; width: 1050px; height: 400px; margin-left: auto; margin-right: auto">
+            <div class>
+
+                <p>태화강 국가정원은 1 급수 생태하천 태화강을 끼고 있는 친환경 생태 정원으로 시간제한 없이 이용할 수 있는 도심 한가운데 위치한 울산 관광의 요지이다.</p>
+                <p>국가정원 홍보 및 전시, 정원해설 등의 편의를 제공하는 안내센터는 9시부터 18시까지, 태화강 국가정원의 명소 중 하나인 은하수길은 매일 일몰 시간부터</p>
+                <p>23시까지로 운영시간이 정해져 있다. 생태, 대나무, 계절, 수생, 참여, 무궁화 총 6개의 공간이 있는데 특히, 이곳의 십리대숲은 바람에 부딪히는 대나무의</p>
+                <p>맑은 소리와 한적하고 아름다은 길로 유명하다. 또한 유아를 위한 정원 가꾸기, 가족 단위 정원 체험 프로그램 등을 운영 중이다. 주위에 태화루, 동굴피아,</p>
+                <p>철새 홍보관을 비롯하여 울산 12경에 속하는 대왕암공원, 동해에서 가장 먼저 해가 떠오르는 간절곶 등이 있다.</p>
+
+
+            </div>
+            <img src="/assets/img/장생포%20고래문화마을.jpg" style="display: block; margin: 70px auto 70px auto; width: 1050px; height: 400px; margin-left: auto; margin-right: auto">
+            <div class>
+
+                <p>2015년 조성된 고래문화마을에서는 예전 장생포 고래잡이 어촌의 모습을 그대로 재현하였으며, 고래광장, 장생포 옛 마을, 선사시대 고래마당, 고래조각</p>
+                <p>정원, 수생 식물원 등 다양한 테마와 이야기를 담은 공원을 둘러볼 수 있다. 실물크기의 고래를 형상화하여 다양한 고래를 경험하고 학습할 수 있는 이색적인</p>
+                <p>체험공간뿐만 아니라 고래와 관련된 교감, 공존 등 다양한 테마를 다루고 있는 스토리텔링 포토존, 반구대 암각화와 고래잡이 벽화 등 선사시대 고래역사의</p>
+                <p>문화를 체험할 수 있는 야외 학습 공간 등 다양한 학습과 놀이가 가능한 공간이다.</p>
+
+            </div>
+            <img src="/assets/img/울산%20대공원.jpg" style="display: block; margin: 70px auto 70px auto; width: 1050px; height: 400px; margin-left: auto; margin-right: auto">
+            <div class>
+
+                <p>울산광역시 남구 옥동에 있는 전국에서 가장 큰 도심공원이다. 규모가 369만제곱미터에 이르고 시설만 따지면 87만제곱미터 정도로 매우 큰 대공원이다.</p>
+                <p>아쿠아시스 및 식당, 편의점, 간식거리, 화장실, 자전거 대여점, 작은 쉼터가 있으며 책도 다수 보유하고 있다. 가끔 영화도 상영해주고 있습니다. 또한 시즌</p>
+                <p>별로 여러 축제를 개최하고 있으며 현재는 장미축제로 장미원에서 개최되고 있습니다. 대공원 입장료로는 장미원, 동물원, 생태여행관을 이용 할 수 있는 것</p>
+                <p>으로 성인 기준 2000원이며 어린이는 500원을 받고 있습니다.</p>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box2.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/pfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/ptour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/phome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/pcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -128,54 +131,73 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/uindex">울산현대</a>
+            <a href="#">울산현대</a>
             <ul>
-                <li><a href="http://localhost:8080/ufood">맛집</a></li>
-                <li><a href="http://localhost:8080/utour">관광지</a></li>
-                <li><a href="http://localhost:8080/uhome">숙소</a></li>
-                <li><a href="http://localhost:8080/ucourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/jeindex">제주유나이티드</a>
+            <a href="#">제주유나이티드</a>
             <ul>
-                <li><a href="http://localhost:8080/jefood">맛집</a></li>
-                <li><a href="http://localhost:8080/jetour">관광지</a></li>
-                <li><a href="http://localhost:8080/jehome">숙소</a></li>
-                <li><a href="http://localhost:8080/jecourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<body>
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel34.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>롯데 호텔 제주</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>중문관광로72번길 35</b></p>
+            <p><b>롯데호텔 제주는 총 500개의 객실을 갖춘 리조트 호텔입니다. 제주국제공항에서 차로 약 80분 거리</b></p>
+            <p><b>에 있으며 무료 리무진 서비스를 운영하고 있습니다. 또한 천재연 폭포,  여미식물원 등이 도보로</b></p>
+            <p><b>10분 거리에 있습니다. 또한 특별한 테마의 객실들과 오션부, 가든뷰, 등도 즐기실 수 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>310,000원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel35.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p>그랜드 조선 제주</b></p>
+            <p><b>* * * * *</b></p>
+            <p><b>중문관광로72번길 60</b></p>
+             <p><b>제주 국제공항에서 차로 약 1시간이며 대표 관광지가 모여있는 중문관광단지에 위치하고 있어 중문</b></p>
+             <p><b>색달 해변, 천제연폭포, 여미지식물원, 테디베어 뮤지엄 등을 도보로 이동하실 수 있습니다. 그랜드</b></p>
+             <p><b>조선 제주는 사계절 온수풀, 피트니스, 스파, 키즈클럽까지 준비되어 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>274,550원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel36.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>호텔 더본 제주</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>제주 서귀포시 색달로 18</b></p>
+            <p><b>제주국제공항에서 차로 50분 거리에 위치해 있습니다. 주변의 관광 명소로 갯깍주상절리대가 차로</b></p>
+            <p><b>5분 거리에 있으며 국내 차 종합 전시관인 오설록 티 뮤지엄이 차로 20분 거리에 자리해 있습니다.</b></p>
+            <p><b>호텔에는 피트니스센터, 편의점, 코인 세탁실, 연회장 등 부대 시설이 갖춰져 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>214,085원</p></b></div>
+</div>
+</body>

@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/pfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/ptour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/phome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/pcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -128,54 +131,39 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/uindex">울산현대</a>
+            <a href="#">울산현대</a>
             <ul>
-                <li><a href="http://localhost:8080/ufood">맛집</a></li>
-                <li><a href="http://localhost:8080/utour">관광지</a></li>
-                <li><a href="http://localhost:8080/uhome">숙소</a></li>
-                <li><a href="http://localhost:8080/ucourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/jeindex">제주유나이티드</a>
+            <a href="#">제주유나이티드</a>
             <ul>
-                <li><a href="http://localhost:8080/jefood">맛집</a></li>
-                <li><a href="http://localhost:8080/jetour">관광지</a></li>
-                <li><a href="http://localhost:8080/jehome">숙소</a></li>
-                <li><a href="http://localhost:8080/jecourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<main class="contents">
+    <section id="headling">
+        <div class="detail" style="margin: 0 auto; text-align: center;">
+            <img src="/assets/img/제주월드컵경기장.jpg" style="display: block; margin: 80px auto 80px auto; width:900px; height:300px; margin-left: auto; margin-right: auto">
+            <div class = "box">
+                <p>1982년에 창단된 제주특별자치도를 연고로 하는 K리그1 소속의 프로 축구단이다. 지금은 K리그의 트렌드로 자리잡은 연고지 랜드마크 및 지역상권을 배경</p>
+                <p>으로 한 공식 발표 사진의 원조가 제주다. 제주 구단은 '옷피셜 맛집'으로 불릴 만큼 영입한 선수 오피셜 사진을 재밌으면서도 남다르게 찍는 것으로 잘 알려져</p>
+                <p>있으며, 이는 K리그 팬들 사이에서 이른바 '오피셜 혁명'으로 불리고 있다. 2019년 K리그1 최하위를 기록해 K리그2로 자동 강등 당하면서, 2부 리그로 강등된</p>
+                <p>세 번째 기업구단이자, 2부 리그로 강등된 두 번째 원년구단이 되었다. 2020년 K리그2 우승을 하면서, K리그 최초로 1부 리그와 2부 리그 우승을 모두 경험한</p>
+                <p>유일한 클럽이 되었다. 현재 감독은 전 축구선수 김학범 감독이며 주장은 임채민 선수가 맡고 있다.</p>
+            </div>
+        </div>
+
+    </section>
+</main>

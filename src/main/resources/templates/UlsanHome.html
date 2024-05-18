@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축구 여행 가이드</title>
     <link rel="stylesheet" href="/assets/css/topmenu.css">
-    <link rel="stylesheet" href="/assets/css/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.4.0_css_all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
+    <link rel="stylesheet" href="/assets/css/box2.css">
     <style>
         body{
-          background-image: url(/static/assets/img/background2.jpg);
-          background-size: 350px 250px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        table{
-            width:50%;
-            border: solid #444444;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        th, td{
-            border: solid #444444;
-        }
-        h3{
-          text-align: center;
+            background-image: url(/assets/img/background4.jpg);
+            background-size: contain;
         }
     </style>
 </head>
 <body>
 <header class="top-bar con-min-width">
     <h1><span style="color:black">Soccer Tour Guide</span></h1>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/pfood">맛집</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/ptour">관광지</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/phome">숙소</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/pcourse">코스추천</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <aside class="side-bar">
@@ -128,54 +131,73 @@
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/uindex">울산현대</a>
+            <a href="#">울산현대</a>
             <ul>
-                <li><a href="http://localhost:8080/ufood">맛집</a></li>
-                <li><a href="http://localhost:8080/utour">관광지</a></li>
-                <li><a href="http://localhost:8080/uhome">숙소</a></li>
-                <li><a href="http://localhost:8080/ucourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
         <li>
-            <a href="http://localhost:8080/jeindex">제주유나이티드</a>
+            <a href="#">제주유나이티드</a>
             <ul>
-                <li><a href="http://localhost:8080/jefood">맛집</a></li>
-                <li><a href="http://localhost:8080/jetour">관광지</a></li>
-                <li><a href="http://localhost:8080/jehome">숙소</a></li>
-                <li><a href="http://localhost:8080/jecourse">코스추천</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">관광지</a></li>
+                <li><a href="#">숙소</a></li>
+                <li><a href="#">코스추천</a></li>
             </ul>
         </li>
     </ul>
 </aside>
-<h3>k리그 순위</h3>
-<table align="center">
-    <thead>
-    <tr>
-        <th>순위</th>
-        <th>엠뷸럼</th>
-        <th>팀명</th>
-        <th>경기수</th>
-        <th>승점</th>
-        <th>승</th>
-        <th>무</th>
-        <th>패</th>
-        <th>득실차</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="team : ${teamDataList}">
-        <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
-        <td th:text="${team.title}"></td>
-        <td th:text="${team.match}"></td>
-        <td th:text="${team.point}"></td>
-        <td th:text="${team.victory}"></td>
-        <td th:text="${team.draw}"></td>
-        <td th:text="${team.defeat}"></td>
-        <td th:text="${team.diff}"></td>
-    </tr>
-    </tbody>
-</table>
-
 </body>
 </html>
+<body>
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel31.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>신라스테이 울산</b></p>
+            <p><b>* * *</b></p>
+            <p><b>울산 남구 삼산로 200 신라스테이</b></p>
+            <p><b>울산 박물관과 대공원에서 차로 약 12분이면 갈 수 있습니다. 태화강 대공원과 현대자동차 공장도</b></p>
+            <p><b>차로 약 15분 거리 이내에 있습니다. 호텔에는 미팅룸, 비즈니스 코너, 피트니스 센터 등 다양한</b></p>
+            <p><b>시설이 마련되어 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>96,000원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel32.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p>스타즈 호텔 울산점</b></p>
+            <p><b>* * *</b></p>
+            <p><b>울산 남구 남중로 65</b></p>
+             <p><b>스타즈 호텔 울산점은 울산고속버스터미널에서 걸어서 20분, KTX울산역에서 차로 30분, 동해선 태</b></p>
+             <p><b>화강역에서 차로 5분 거리에 있습니다. 주변 관광지로는 울산박물관까지 차로 약 20분 정도 소요됩</b></p>
+             <p><b>니다. 호텔 내에는 비즈니스 라운지, 피트니스 센터 등의 부대시설이 마련되어 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>54,007원</p></b></div>
+</div>
+
+<div class="container">
+    <div class="box box-1"><img src="/assets/img/hotel33.jpg"></div>
+    <div class="box box-2">
+        <span class="box-content">
+            <p><b>호텔현대 바이 라한 울산</b></p>
+            <p><b>* * * *</b></p>
+            <p><b>울산 동구 방어진순환도로 875 호텔현대 바이 라한 울산</b></p>
+            <p><b>태화강역에서 차로 약 20분, KTX 울산역에서 차로 약 50분 거리에 있습니다. 주변 관광지로는 울산</b></p>
+            <p><b>해수욕장이 차로 약 10분, 장생포고래문화마을은 차로 약 20분이면 갈 수 있습니다. 호텔에는 키즈</b></p>
+            <p><b>풀이 포함된 수영장과 사우나, 피트니스센터, 비즈니스센터 등 다양한 시설이 마련되어 있습니다.</b></p>
+            <p><b>Wifi 무료</b></p>
+        </span>
+    </div>
+    <div class="box box-3"><b><p>108,779원</p></b></div>
+</div>
+</body>
