@@ -165,7 +165,7 @@
     <tbody>
     <tr th:each="team : ${teamDataList}">
         <td th:text="${team.rank}"></td>
-        <td><img th:src="${team.img}"></td>
+        <td><img th:src="${team.img}" alt="구단로고"></td>
         <td th:text="${team.title}"></td>
         <td th:text="${team.match}"></td>
         <td th:text="${team.point}"></td>
